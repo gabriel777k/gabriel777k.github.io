@@ -58,10 +58,28 @@
 											<span class="icon fa-gem"></span>
 											<div class="content">
 												<h3>Aveia em flocos
-												<p>Seus benefícios
-												<p>A aveia em flocos é um superalimento que oferece diversos benefícios para a saúde. Rica em fibras solúveis, como o beta-glucano, ajuda a controlar o colesterol e o açúcar no sangue, promovendo a saúde cardiovascular. Além disso, suas fibras melhoram a digestão e aumentam a sensação de saciedade, auxiliando no controle de peso.</p>
-											</div> 
-											<li><a href="#" class="button big">Leia mais</a></li>
+												<h2>Benefícios da Aveia em Flocos</h2>
+<p>A aveia em flocos é um superalimento que oferece diversos benefícios para a saúde. Rica em fibras solúveis, como o beta-glucano, ajuda a controlar o colesterol e o açúcar no sangue, promovendo a saúde cardiovascular. Além disso, suas fibras melhoram a digestão e aumentam a sensação de saciedade, auxiliando no controle de peso.</p>
+
+<button id="toggleButton">Leia mais</button>
+
+<div class="extra-content" id="extraContent" style="display: none;">
+    <p>A aveia também é rica em vitaminas do complexo B, minerais como magnésio e ferro, e pode reduzir o risco de doenças crônicas, como diabetes tipo 2. Versátil e fácil de incorporar na dieta, a aveia em flocos é uma escolha prática e saudável para quem busca bem-estar!</p>
+</div>
+
+<script>
+    document.getElementById('toggleButton').addEventListener('click', function() {
+        var content = document.getElementById('extraContent');
+        if (content.style.display === 'none') {
+            content.style.display = 'block'; // Mostra o conteúdo extra
+            this.innerText = 'Leia menos'; // Muda o texto do botão
+        } else {
+            content.style.display = 'none'; // Esconde o conteúdo extra
+            this.innerText = 'Leia mais'; // Restaura o texto do botão
+        }
+    });
+</script>
+
 										</article>
 										<article>
 											<span class="icon solid fa-paper-plane"></span>
