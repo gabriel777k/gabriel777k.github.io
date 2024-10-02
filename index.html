@@ -125,48 +125,52 @@
 										</article>
 										<article>
 											<span class="icon solid fa-paper-plane"></span>
-											<div class="content">
-												<h3>Sapien veroeros</h3>
-												<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-											</div>
-										</article>
-										<article>
-											<span class="icon solid fa-rocket"></span>
-											<div class="content">
-												<h3>Quam lorem ipsum</h3>
-												<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-											</div>
-										</article>
-										<article>
-											<span class="icon solid fa-signal"></span>
-											<div class="content">
-												<h3>Sed magna finibus</h3>
-												<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-											</div>
-										</article>
-									</div>
-								</section>
+											<div class="content"><button id="toggleButton5">Leia mais sobre Quinoa</button>
+<div class="extra-content" id="extraContent5" style="display: none;">
+    <p>A quinoa é uma excelente fonte de proteína completa, rica em aminoácidos essenciais. É também rica em fibras, que ajudam na digestão e promovem a saciedade. Além disso, a quinoa contém vitaminas e minerais, como magnésio e ferro, que são importantes para a saúde geral.</p>
+</div>
 
-							<!-- Section -->
-								<section>
-									<header class="major">
-										<h2>Ipsum sed dolor</h2>
-									</header>
-									<div class="posts">
-										<article>
-											<a href="#" class="image"><img src="images/pic01.jpg" alt="" /></a>
-											<h3>Interdum aenean</h3>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-											<ul class="actions">
-												<li><a href="#" class="button">More</a></li>
-											</ul>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic02.jpg" alt="" /></a>
-											<h3>Nulla amet dolore</h3>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-											<ul class="actions">
-												<li><a href="#" class="button">More</a></li>
+<button id="toggleButton6">Leia mais sobre Chia</button>
+<div class="extra-content" id="extraContent6" style="display: none;">
+    <p>A chia é rica em ácidos graxos ômega-3, fibras e proteínas. Esses nutrientes ajudam a regular o colesterol e a melhorar a saúde cardiovascular. A chia também absorve água, formando um gel que promove a saciedade e é benéfica para a digestão.</p>
+</div>
+
+<button id="toggleButton7">Leia mais sobre Cúrcuma</button>
+<div class="extra-content" id="extraContent7" style="display: none;">
+    <p>A cúrcuma é conhecida por suas propriedades anti-inflamatórias e antioxidantes, devido à curcumina, seu principal composto ativo. Ela pode ajudar a melhorar a saúde digestiva, reduzir a inflamação e fortalecer o sistema imunológico.</p>
+</div>
+
+<h2>Conecte-se Conosco!</h2>
+<p>Siga-nos no Instagram para mais dicas e novidades sobre produtos naturais:</p>
+<a href="https://www.instagram.com/seu_usuario" target="_blank">
+    <button>Visite nosso Instagram</button>
+</a>
+
+<script>
+    // Função para alternar a exibição do conteúdo
+    function toggleContent(buttonId, contentId) {
+        const button = document.getElementById(buttonId);
+        const content = document.getElementById(contentId);
+        button.addEventListener('click', function() {
+            if (content.style.display === 'none') {
+                content.style.display = 'block'; // Mostra o conteúdo extra
+                button.innerText = 'Leia menos'; // Muda o texto do botão
+            } else {
+                content.style.display = 'none'; // Esconde o conteúdo extra
+                button.innerText = 'Leia mais'; // Restaura o texto do botão
+            }
+        });
+    }
+
+    // Inicializa os botões e conteúdos
+    toggleContent('toggleButton1', 'extraContent1');
+    toggleContent('toggleButton2', 'extraContent2');
+    toggleContent('toggleButton3', 'extraContent3');
+    toggleContent('toggleButton4', 'extraContent4');
+    toggleContent('toggleButton5', 'extraContent5');
+    toggleContent('toggleButton6', 'extraContent6');
+    toggleContent('toggleButton7', 'extraContent7');
+</script>li><a href="#" class="button">More</a></li>
 											</ul>
 										</article>
 										<article>
