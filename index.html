@@ -57,15 +57,52 @@
 										<article>
 											<span class="icon fa-gem"></span>
 											<div class="content">
-												<h3>Aveia em flocos
-												<h2>Benefícios da Aveia em Flocos</h2>
-<p>A aveia em flocos é um superalimento que oferece diversos benefícios para a saúde. Rica em fibras solúveis, como o beta-glucano, ajuda a controlar o colesterol e o açúcar no sangue, promovendo a saúde cardiovascular. Além disso, suas fibras melhoram a digestão e aumentam a sensação de saciedade, auxiliando no controle de peso.</p>
+												
+<p>A aveia em flocos, castanhas, soja e gengibre em pó são alimentos que oferecem diversos benefícios para a saúde. Conheça um pouco mais sobre cada um deles!</p>
 
-<button id="toggleButton">Leia mais</button>
-
-<div class="extra-content" id="extraContent" style="display: none;">
-    <p>A aveia também é rica em vitaminas do complexo B, minerais como magnésio e ferro, e pode reduzir o risco de doenças crônicas, como diabetes tipo 2. Versátil e fácil de incorporar na dieta, a aveia em flocos é uma escolha prática e saudável para quem busca bem-estar!</p>
+<button id="toggleButton1">Leia mais sobre Aveia em Flocos</button>
+<div class="extra-content" id="extraContent1" style="display: none;">
+    <p>A aveia em flocos é rica em fibras solúveis, que ajudam a controlar o colesterol e o açúcar no sangue, promovendo a saúde cardiovascular. Além disso, melhora a digestão e proporciona saciedade, sendo uma aliada no controle de peso. É uma excelente fonte de nutrientes, como vitaminas do complexo B, magnésio e ferro.</p>
 </div>
+
+<button id="toggleButton2">Leia mais sobre Castanhas</button>
+<div class="extra-content" id="extraContent2" style="display: none;">
+    <p>As castanhas são ricas em gorduras saudáveis, proteínas e fibras, que ajudam a reduzir o colesterol ruim e promovem a saúde do coração. Também são uma fonte de antioxidantes e vitaminas, fortalecendo o sistema imunológico e promovendo a saciedade, o que pode auxiliar no controle de peso.</p>
+</div>
+
+<button id="toggleButton3">Leia mais sobre Soja</button>
+<div class="extra-content" id="extraContent3" style="display: none;">
+    <p>A soja é uma excelente fonte de proteína vegetal e contém todos os aminoácidos essenciais. Rica em isoflavonas, pode ajudar a regular os níveis de colesterol e promover a saúde óssea. O consumo de soja está associado à redução do risco de doenças cardíacas e certos tipos de câncer.</p>
+</div>
+
+<button id="toggleButton4">Leia mais sobre Gengibre em Pó</button>
+<div class="extra-content" id="extraContent4" style="display: none;">
+    <p>O gengibre em pó possui propriedades anti-inflamatórias e antioxidantes. Ajuda na digestão, alivia náuseas e pode reduzir a dor muscular. Além disso, fortalece o sistema imunológico e pode ajudar a melhorar a circulação sanguínea e a reduzir o estresse.</p>
+</div>
+
+<script>
+    // Função para alternar a exibição do conteúdo
+    function toggleContent(buttonId, contentId) {
+        const button = document.getElementById(buttonId);
+        const content = document.getElementById(contentId);
+        button.addEventListener('click', function() {
+            if (content.style.display === 'none') {
+                content.style.display = 'block'; // Mostra o conteúdo extra
+                button.innerText = 'Leia menos'; // Muda o texto do botão
+            } else {
+                content.style.display = 'none'; // Esconde o conteúdo extra
+                button.innerText = 'Leia mais'; // Restaura o texto do botão
+            }
+        });
+    }
+
+    // Inicializa os botões e conteúdos
+    toggleContent('toggleButton1', 'extraContent1');
+    toggleContent('toggleButton2', 'extraContent2');
+    toggleContent('toggleButton3', 'extraContent3');
+    toggleContent('toggleButton4', 'extraContent4');
+</script>
+
 
 <script>
     document.getElementById('toggleButton').addEventListener('click', function() {
