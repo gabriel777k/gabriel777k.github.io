@@ -102,3 +102,67 @@ button:hover {
     font-size: 0.9rem;
   }
 }
+/* Estilos da seção de benefícios */
+.benefits-section {
+  background-color: var(--background-color, #F9F9F9);
+  padding: 40px;
+  margin: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.benefits-section h2 {
+  text-align: center;
+  color: var(--primary-color, #4CAF50);
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.food-item {
+  background-color: white;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.food-item h3 {
+  color: var(--primary-color, #4CAF50);
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.food-item p {
+  color: var(--text-color, #333);
+  font-size: 1rem;
+  text-align: justify;
+}
+
+/* Adicionar uma transição suave ao passar o mouse */
+.food-item:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s ease;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .benefits-section {
+    padding: 20px;
+  }
+
+  .food-item {
+    margin-bottom: 15px;
+  }
+
+  .benefits-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .food-item h3 {
+    font-size: 1.3rem;
+  }
+
+  .food-item p {
+    font-size: 0.9rem;
+  }
+}
