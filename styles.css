@@ -1,0 +1,104 @@
+/* Definindo variáveis de cores */
+:root {
+  --primary-color: #4CAF50; /* Verde */
+  --secondary-color: #8BC34A; /* Verde claro */
+  --accent-color: #FFEB3B; /* Amarelo para destaques */
+  --background-color: #F9F9F9; /* Cor do fundo */
+  --text-color: #333; /* Cor do texto */
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+h2 {
+  color: var(--primary-color);
+  font-size: 2rem;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+h3 {
+  color: var(--secondary-color);
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+p {
+  font-size: 1rem;
+  margin: 10px 0;
+  text-align: justify;
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: var(--primary-color);
+}
+
+.highlight {
+  color: var(--accent-color);
+  font-weight: bold;
+}
+
+.tagline {
+  font-style: italic;
+  color: var(--secondary-color);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Seções */
+.connect-section, .about-section, .products-section, .social-section {
+  background-color: white;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.products-section {
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 30px;
+  text-align: center;
+}
+
+.products-section p {
+  font-size: 1.2rem;
+}
+
+button {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: var(--secondary-color);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+}
