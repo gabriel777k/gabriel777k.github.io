@@ -289,3 +289,27 @@ ul li {
 ul li strong {
   color: #4CAF50;
 }
+
+// Castanha (leia mais)
+document.getElementById('readMoreBtn').addEventListener('click', function() {
+  var moreInfo = document.getElementById('moreInfo');
+  if (moreInfo.classList.contains('hidden')) {
+    moreInfo.classList.remove('hidden'); // Remove a classe 'hidden' para mostrar o conteúdo
+    this.textContent = "Leia Menos"; // Muda o texto do botão para 'Leia Menos'
+  } else {
+    moreInfo.classList.add('hidden'); // Adiciona a classe 'hidden' para esconder o conteúdo
+    this.textContent = "Leia Mais"; // Muda o texto do botão para 'Leia Mais'
+  }
+});
+
+// Função para mostrar/esconder o conteúdo das castanhas ao clicar no botão
+document.getElementById('readMoreCastanhasBtn').addEventListener('click', function() {
+  var moreInfoCastanhas = document.getElementById('moreInfoCastanhas');
+  if (moreInfoCastanhas.classList.contains('hidden')) {
+    moreInfoCastanhas.classList.remove('hidden'); // Remove a classe 'hidden' para mostrar o conteúdo
+    this.textContent = "Leia Menos"; // Muda o texto do botão para 'Leia Menos'
+  } else {
+    moreInfoCastanhas.classList.add('hidden'); // Adiciona a classe 'hidden' para esconder o conteúdo
+    this.textContent = "Leia Mais"; // Muda o texto do botão para 'Leia Mais'
+  }
+});
