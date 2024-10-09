@@ -28,6 +28,73 @@ h3 {
   font-size: 1.5rem;
   text-align: center;
 }
+/* Estilos da seção de benefícios */
+.benefits-section {
+  background-color: var(--background-color, #F9F9F9);
+  padding: 40px;
+  margin: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.benefits-section h2 {
+  text-align: center;
+  color: var(--primary-color, #4CAF50);
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+/* Estilizando os alimentos e alinhando à esquerda */
+.food-item {
+  background-color: white;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: flex-start;
+}
+
+.food-item h3 {
+  color: var(--primary-color, #4CAF50);
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  flex: 1; /* Garante que o título fique na esquerda */
+  text-align: left; /* Alinha o texto à esquerda */
+}
+
+.food-item p {
+  color: var(--text-color, #333);
+  font-size: 1rem;
+  text-align: justify;
+  flex: 3; /* Dá mais espaço para o texto */
+}
+
+/* Adicionar uma transição suave ao passar o mouse */
+.food-item:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s ease;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .benefits-section {
+    padding: 20px;
+  }
+
+  .food-item {
+    flex-direction: column; /* Em telas pequenas, os títulos e textos ficam empilhados */
+  }
+
+  .food-item h3 {
+    font-size: 1.3rem;
+  }
+
+  .food-item p {
+    font-size: 0.9rem;
+  }
+}
+
 
 p {
   font-size: 1rem;
