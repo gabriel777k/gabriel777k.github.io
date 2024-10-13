@@ -1,23 +1,15 @@
-// Função para exibir ou ocultar informações sobre a Aveia
-document.getElementById("readMoreAveiaBtn").addEventListener("click", function() {
-    var moreInfo = document.getElementById("moreInfoAveia");
-    if (moreInfo.style.display === "none" || moreInfo.style.display === "") {
-        moreInfo.style.display = "block";
-        this.innerText = "Leia Menos";
-    } else {
-        moreInfo.style.display = "none";
-        this.innerText = "Leia Mais";
-    }
-});
-
-// Função para exibir ou ocultar informações sobre as Castanhas
-document.getElementById("readMoreCastanhaBtn").addEventListener("click", function() {
-    var moreInfo = document.getElementById("moreInfoCastanha");
-    if (moreInfo.style.display === "none" || moreInfo.style.display === "") {
-        moreInfo.style.display = "block";
-        this.innerText = "Leia Menos";
-    } else {
-        moreInfo.style.display = "none";
-        this.innerText = "Leia Mais";
-    }
+// Função para exibir/ocultar informações de cada produto
+document.querySelectorAll('.btn-leia-mais').forEach(function(button) {
+    button.addEventListener('click', function() {
+        var targetId = this.getAttribute('data-target');
+        var targetElement = document.getElementById(targetId);
+        
+        if (targetElement.style.display === "none" || targetElement.style.display === "") {
+            targetElement.style.display = "block";
+            this.textContent = "Leia Menos";
+        } else {
+            targetElement.style.display = "none";
+            this.textContent = "Leia Mais";
+        }
+    });
 });
