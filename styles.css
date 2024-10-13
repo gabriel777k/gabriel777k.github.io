@@ -345,3 +345,10 @@ ul li strong {
   color: #4CAF50;
 }
 
+.minha-imagem {
+  width: 300px; /* Ajusta a largura da imagem */
+  height: auto; /* Mantém a proporção */
+  display: block;
+  margin: 0 auto; /* Centraliza a imagem na tela */
+}
+
