@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Verde Sabor - Loja de Produtos Naturais</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
 
-    <!-- Cabeçalho do site -->
+    <!-- Cabeçalho com Menu Fixo -->
     <header>
         <div class="header-container">
             <h1>Verde Sabor</h1>
@@ -17,24 +18,44 @@
         <nav>
             <ul>
                 <li><a href="#">Home</a></li>
-                <li><a href="#">Produtos</a></li>
-                <li><a href="#">Contato</a></li>
-                <li><a href="#">Sobre Nós</a></li>
+                <li><a href="#produtos">Produtos</a></li>
+                <li><a href="#depoimentos">Depoimentos</a></li>
+                <li><a href="#contato">Contato</a></li>
+                <li><a href="#sobre-nos">Sobre Nós</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Banner Principal -->
+    <!-- Banner Principal com Botão de Ação -->
     <section class="banner">
         <div class="banner-text">
             <h2>Descubra o Poder dos Alimentos Naturais!</h2>
             <p>Encontre produtos que fazem bem para a sua saúde e para o planeta.</p>
-            <a href="#" class="btn-banner">Ver Produtos</a>
+            <a href="#produtos" class="btn-banner">Ver Produtos</a>
+        </div>
+    </section>
+
+    <!-- Seção de Produtos em Destaque com Carrossel -->
+    <section class="destaques">
+        <h2>Produtos em Destaque</h2>
+        <div class="carousel">
+            <div class="carousel-item">
+                <img src="imagens/destaque1.jpg" alt="Destaque 1">
+                <h3>Produto Natural 1</h3>
+            </div>
+            <div class="carousel-item">
+                <img src="imagens/destaque2.jpg" alt="Destaque 2">
+                <h3>Produto Natural 2</h3>
+            </div>
+            <div class="carousel-item">
+                <img src="imagens/destaque3.jpg" alt="Destaque 3">
+                <h3>Produto Natural 3</h3>
+            </div>
         </div>
     </section>
 
     <!-- Seção de Produtos Naturais -->
-    <section class="produtos">
+    <section class="produtos" id="produtos">
         <h2>Nossos Produtos Naturais</h2>
         <div class="product-grid">
 
@@ -68,55 +89,11 @@
                 </div>
             </div>
 
-            <!-- Produto 3: Soja -->
-            <div class="product-card">
-                <img src="imagens/soja.jpg" alt="Soja" class="product-image">
-                <h3>Soja</h3>
-                <p>Rica em proteínas e excelente fonte de fibras.</p>
-                <button class="btn-leia-mais" data-target="beneficios-soja">Leia Mais</button>
-                <div class="beneficios hidden" id="beneficios-soja">
-                    <ul>
-                        <li>Ajuda no controle do colesterol.</li>
-                        <li>Fonte de proteínas para uma dieta equilibrada.</li>
-                        <li>Excelente para o sistema cardiovascular.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Produto 4: Gengibre em Pó -->
-            <div class="product-card">
-                <img src="imagens/gengibre.jpg" alt="Gengibre em Pó" class="product-image">
-                <h3>Gengibre em Pó</h3>
-                <p>Conhecido por suas propriedades anti-inflamatórias e digestivas.</p>
-                <button class="btn-leia-mais" data-target="beneficios-gengibre">Leia Mais</button>
-                <div class="beneficios hidden" id="beneficios-gengibre">
-                    <ul>
-                        <li>Ajuda na digestão e alivia náuseas.</li>
-                        <li>Possui propriedades anti-inflamatórias e antioxidantes.</li>
-                        <li>É ótimo para o sistema imunológico.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Mais 6 Produtos Naturais -->
-            <div class="product-card">
-                <img src="imagens/linhaça.jpg" alt="Linhaça" class="product-image">
-                <h3>Linhaça</h3>
-                <p>Rica em ômega 3, excelente para o coração e cérebro.</p>
-                <button class="btn-leia-mais" data-target="beneficios-linhaca">Leia Mais</button>
-                <div class="beneficios hidden" id="beneficios-linhaca">
-                    <ul>
-                        <li>Fonte de ácidos graxos ômega 3, bons para o cérebro.</li>
-                        <li>Ajuda a reduzir a inflamação e o colesterol.</li>
-                        <li>Rica em fibras, promovendo a saúde digestiva.</li>
-                    </ul>
-                </div>
-            </div>
-
+            <!-- Exemplo de Produto 3 -->
             <div class="product-card">
                 <img src="imagens/quinoa.jpg" alt="Quinoa" class="product-image">
                 <h3>Quinoa</h3>
-                <p>Um superalimento, rico em proteínas e aminoácidos essenciais.</p>
+                <p>Um superalimento rico em proteínas e aminoácidos essenciais.</p>
                 <button class="btn-leia-mais" data-target="beneficios-quinoa">Leia Mais</button>
                 <div class="beneficios hidden" id="beneficios-quinoa">
                     <ul>
@@ -127,14 +104,40 @@
                 </div>
             </div>
 
-            <!-- Mais produtos... -->
+            <!-- Outros produtos seguem a mesma estrutura... -->
 
         </div>
+    </section>
+
+    <!-- Seção de Depoimentos -->
+    <section id="depoimentos" class="depoimentos">
+        <h2>O que nossos clientes dizem</h2>
+        <div class="depoimentos-grid">
+            <div class="depoimento">
+                <p>"Os produtos são incríveis e a qualidade é excelente. Sinto muita diferença na minha saúde desde que comecei a consumir os alimentos naturais da Verde Sabor."</p>
+                <span>- Maria Oliveira</span>
+            </div>
+            <div class="depoimento">
+                <p>"Amo as castanhas e o gengibre em pó, super práticos para o meu dia a dia. E o atendimento é impecável!"</p>
+                <span>- João Silva</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Newsletter -->
+    <section id="contato" class="newsletter">
+        <h2>Inscreva-se em nossa Newsletter</h2>
+        <p>Receba as melhores dicas e novidades sobre produtos naturais diretamente no seu e-mail.</p>
+        <form action="#">
+            <input type="email" placeholder="Seu e-mail" required>
+            <button type="submit">Inscrever-se</button>
+        </form>
     </section>
 
     <!-- Rodapé do site -->
     <footer>
         <p>Siga-nos no Instagram para mais dicas sobre produtos naturais: <strong>@verdesabor</strong></p>
+        <p>&copy; 2024 Verde Sabor. Todos os direitos reservados.</p>
     </footer>
 
     <script src="script.js"></script>
