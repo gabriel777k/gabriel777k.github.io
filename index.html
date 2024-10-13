@@ -3,56 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Verde Sabor - Alimentos Naturais</title>
+    <title>Verde Sabor - Loja de Produtos Naturais</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
     <!-- Cabeçalho do site -->
     <header>
-        <h1>Bem-vindo ao Verde Sabor!</h1>
-        <p>Sua seleção especial de alimentos naturais e orgânicos.</p>
+        <div class="header-container">
+            <h1>Verde Sabor</h1>
+            <p>Produtos Naturais e Orgânicos para o seu Bem-Estar</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Produtos</a></li>
+                <li><a href="#">Contato</a></li>
+                <li><a href="#">Sobre Nós</a></li>
+            </ul>
+        </nav>
     </header>
+
+    <!-- Banner Principal -->
+    <section class="banner">
+        <div class="banner-text">
+            <h2>Descubra o Poder dos Alimentos Naturais!</h2>
+            <p>Encontre produtos que fazem bem para a sua saúde e para o planeta.</p>
+            <a href="#" class="btn-banner">Ver Produtos</a>
+        </div>
+    </section>
 
     <!-- Seção de Produtos Naturais -->
     <section class="produtos">
-        <h2>Produtos Naturais</h2>
-        <div class="produto-item">
-            <h3 class="green-text">Aveia em Flocos</h3>
-            <img src="imagens/aveia.jpg" alt="Imagem de Aveia" class="food-image">
-            <p>A aveia é rica em fibras e excelente para a saúde!</p>
-            <button id="readMoreAveiaBtn" class="read-more-btn">Leia Mais</button>
-            <div id="moreInfoAveia" class="hidden">
-                <ul>
-                    <li><strong>Rica em Fibras:</strong> A aveia contém fibras que ajudam a reduzir o colesterol ruim (LDL).</li>
-                    <li><strong>Melhora a Digestão:</strong> As fibras promovem um trânsito intestinal saudável.</li>
-                    <li><strong>Energia de Liberação Lenta:</strong> Devido ao baixo índice glicêmico, fornece energia gradual.</li>
-                    <li><strong>Controle do Peso:</strong> Aumenta a saciedade, ajudando a controlar o apetite.</li>
-                    <li><strong>Fonte de Nutrientes:</strong> Contém magnésio, ferro, e vitaminas do complexo B.</li>
-                </ul>
-            </div>
-        </div>
+        <h2>Nossos Produtos Naturais</h2>
+        <div class="product-grid">
 
-        <div class="produto-item">
-            <h3 class="green-text">Castanhas</h3>
-            <img src="imagens/castanhas.jpg" alt="Imagem de Castanhas" class="food-image">
-            <p>As castanhas são ricas em gorduras saudáveis e antioxidantes!</p>
-            <button id="readMoreCastanhaBtn" class="read-more-btn">Leia Mais</button>
-            <div id="moreInfoCastanha" class="hidden">
-                <ul>
-                    <li><strong>Gorduras Saudáveis:</strong> Ricas em gorduras insaturadas que beneficiam o coração.</li>
-                    <li><strong>Antioxidantes:</strong> Protegem as células contra danos dos radicais livres.</li>
-                    <li><strong>Fonte de Vitaminas:</strong> Contêm vitamina E, que promove a saúde da pele.</li>
-                    <li><strong>Controle do Peso:</strong> As castanhas ajudam na sensação de saciedade.</li>
-                    <li><strong>Proteínas:</strong> São uma ótima fonte de proteínas vegetais.</li>
-                </ul>
+            <!-- Exemplo de Produto 1 -->
+            <div class="product-card">
+                <img src="imagens/aveia.jpg" alt="Aveia em Flocos" class="product-image">
+                <h3>Aveia em Flocos</h3>
+                <p>Aveia rica em fibras, ideal para uma dieta equilibrada.</p>
+                <button class="btn-leia-mais" data-target="beneficios-aveia">Leia Mais</button>
+                <div class="beneficios hidden" id="beneficios-aveia">
+                    <ul>
+                        <li>Rica em fibras, melhora a digestão e reduz o colesterol.</li>
+                        <li>Fornece energia de liberação lenta, evitando picos de açúcar.</li>
+                        <li>Ajuda no controle de peso e promove saciedade.</li>
+                    </ul>
+                </div>
             </div>
+
+            <!-- Exemplo de Produto 2 -->
+            <div class="product-card">
+                <img src="imagens/castanhas.jpg" alt="Castanhas" class="product-image">
+                <h3>Castanhas</h3>
+                <p>Castanhas ricas em gorduras boas e antioxidantes.</p>
+                <button class="btn-leia-mais" data-target="beneficios-castanha">Leia Mais</button>
+                <div class="beneficios hidden" id="beneficios-castanha">
+                    <ul>
+                        <li>Ricas em gorduras insaturadas que beneficiam o coração.</li>
+                        <li>Possuem antioxidantes que protegem as células.</li>
+                        <li>São fonte de vitaminas e proteínas vegetais.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Produto 3: Soja -->
+            <div class="product-card">
+                <img src="imagens/soja.jpg" alt="Soja" class="product-image">
+                <h3>Soja</h3>
+                <p>Rica em proteínas e excelente fonte de fibras.</p>
+                <button class="btn-leia-mais" data-target="beneficios-soja">Leia Mais</button>
+                <div class="beneficios hidden" id="beneficios-soja">
+                    <ul>
+                        <li>Ajuda no controle do colesterol.</li>
+                        <li>Fonte de proteínas para uma dieta equilibrada.</li>
+                        <li>Excelente para o sistema cardiovascular.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Produto 4: Gengibre em Pó -->
+            <div class="product-card">
+                <img src="imagens/gengibre.jpg" alt="Gengibre em Pó" class="product-image">
+                <h3>Gengibre em Pó</h3>
+                <p>Conhecido por suas propriedades anti-inflamatórias e digestivas.</p>
+                <button class="btn-leia-mais" data-target="beneficios-gengibre">Leia Mais</button>
+                <div class="beneficios hidden" id="beneficios-gengibre">
+                    <ul>
+                        <li>Ajuda na digestão e alivia náuseas.</li>
+                        <li>Possui propriedades anti-inflamatórias e antioxidantes.</li>
+                        <li>É ótimo para o sistema imunológico.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Mais 6 Produtos Naturais -->
+            <div class="product-card">
+                <img src="imagens/linhaça.jpg" alt="Linhaça" class="product-image">
+                <h3>Linhaça</h3>
+                <p>Rica em ômega 3, excelente para o coração e cérebro.</p>
+                <button class="btn-leia-mais" data-target="beneficios-linhaca">Leia Mais</button>
+                <div class="beneficios hidden" id="beneficios-linhaca">
+                    <ul>
+                        <li>Fonte de ácidos graxos ômega 3, bons para o cérebro.</li>
+                        <li>Ajuda a reduzir a inflamação e o colesterol.</li>
+                        <li>Rica em fibras, promovendo a saúde digestiva.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="imagens/quinoa.jpg" alt="Quinoa" class="product-image">
+                <h3>Quinoa</h3>
+                <p>Um superalimento, rico em proteínas e aminoácidos essenciais.</p>
+                <button class="btn-leia-mais" data-target="beneficios-quinoa">Leia Mais</button>
+                <div class="beneficios hidden" id="beneficios-quinoa">
+                    <ul>
+                        <li>Rica em proteínas e fibras, ajuda na digestão.</li>
+                        <li>Contém todos os aminoácidos essenciais.</li>
+                        <li>Boa fonte de vitaminas e minerais.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Mais produtos... -->
+
         </div>
     </section>
 
     <!-- Rodapé do site -->
     <footer>
-        <p>Conecte-se Conosco! Siga-nos no Instagram para mais dicas e novidades sobre produtos naturais: <strong>Verde Sabor</strong></p>
+        <p>Siga-nos no Instagram para mais dicas sobre produtos naturais: <strong>@verdesabor</strong></p>
     </footer>
 
     <script src="script.js"></script>
