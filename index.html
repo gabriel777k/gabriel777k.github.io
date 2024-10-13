@@ -1,103 +1,60 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Verde Sabor - Alimentos Naturais</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-
-  <!-- Seção de Conexão -->
-  <section class="connect-section">
-    <h2>Conecte-se Conosco!</h2>
-    <p>Siga-nos no <a href="https://instagram.com/gb.vp07/" target="_blank">Instagram</a> para mais dicas e novidades sobre produtos naturais:</p>
-    <h3>Verde Sabor</h3>
-  </section>
-
-  <!-- Seção de Apresentação -->
-  <section class="about-section">
-    <h2>Seja bem-vindo ao <span class="highlight">Verde Sabor</span>!</h2>
-    <p>Aqui, você encontra uma seleção especial de alimentos naturais e orgânicos, cuidadosamente escolhidos para quem busca mais saúde, bem-estar e sustentabilidade no dia a dia.</p>
-  </section>
-
-  <!-- Seção de Produtos Naturais -->
-  <section class="products-section">
-    <h2>Produtos Naturais</h2>
-    <p>A aveia em flocos, castanhas, soja e gengibre em pó são alimentos que oferecem diversos benefícios para a saúde. Conheça um pouco mais sobre cada um deles!</p>
-  </section>
-
-  <!-- Seção de Benefícios dos Alimentos -->
-  <section class="benefits-section">
-    <h2>Benefícios dos Alimentos Naturais</h2>
-    <div class="food-item">
-      <h3>Aveia em Flocos</h3>
-      <p>A aveia é rica em fibras, ajudando a controlar o colesterol e melhorar a digestão. Também é uma excelente fonte de energia de liberação lenta.</p>
-    </div>
-    <div class="food-item">
-      <h3>Castanhas</h3>
-      <p>As castanhas são ricas em gorduras saudáveis, vitaminas e minerais, auxiliando na saúde do coração e proporcionando saciedade.</p>
-    </div>
-    <div class="food-item">
-      <h3>Soja</h3>
-      <p>A soja é uma excelente fonte de proteínas vegetais, ajudando no fortalecimento muscular e no controle dos níveis de colesterol.</p>
-    </div>
-    <div class="food-item">
-      <h3>Gengibre em Pó</h3>
-      <p>O gengibre tem propriedades anti-inflamatórias e antioxidantes, sendo ótimo para a digestão e para combater náuseas.</p>
-    </div>
-  </section>
-
-</body>
-</html>
-
-
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Verde Sabor - Benefícios dos Alimentos</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-
-  <section class="benefits-section">
-  <h2>Benefícios da Aveia em Flocos</h2>
-  <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Site de Alimentos Naturais</title>
+    <title>Verde Sabor - Alimentos Naturais</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+    <!-- Cabeçalho do site -->
     <header>
         <h1>Bem-vindo ao Verde Sabor!</h1>
+        <p>Sua seleção especial de alimentos naturais e orgânicos.</p>
     </header>
 
-    <section class="beneficios">
-        <h2>Benefícios da Aveia</h2>
-        <!-- Adicionando a imagem -->
-        <img src="imagens/aveia.jpg" alt="Imagem de aveia" class="minha-imagem">
-        <p>A aveia é rica em fibras e excelente para a saúde!</p>
+    <!-- Seção de Produtos Naturais -->
+    <section class="produtos">
+        <h2>Produtos Naturais</h2>
+        <div class="produto-item">
+            <h3 class="green-text">Aveia em Flocos</h3>
+            <img src="imagens/aveia.jpg" alt="Imagem de Aveia" class="food-image">
+            <p>A aveia é rica em fibras e excelente para a saúde!</p>
+            <button id="readMoreAveiaBtn" class="read-more-btn">Leia Mais</button>
+            <div id="moreInfoAveia" class="hidden">
+                <ul>
+                    <li><strong>Rica em Fibras:</strong> A aveia contém fibras que ajudam a reduzir o colesterol ruim (LDL).</li>
+                    <li><strong>Melhora a Digestão:</strong> As fibras promovem um trânsito intestinal saudável.</li>
+                    <li><strong>Energia de Liberação Lenta:</strong> Devido ao baixo índice glicêmico, fornece energia gradual.</li>
+                    <li><strong>Controle do Peso:</strong> Aumenta a saciedade, ajudando a controlar o apetite.</li>
+                    <li><strong>Fonte de Nutrientes:</strong> Contém magnésio, ferro, e vitaminas do complexo B.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="produto-item">
+            <h3 class="green-text">Castanhas</h3>
+            <img src="imagens/castanhas.jpg" alt="Imagem de Castanhas" class="food-image">
+            <p>As castanhas são ricas em gorduras saudáveis e antioxidantes!</p>
+            <button id="readMoreCastanhaBtn" class="read-more-btn">Leia Mais</button>
+            <div id="moreInfoCastanha" class="hidden">
+                <ul>
+                    <li><strong>Gorduras Saudáveis:</strong> Ricas em gorduras insaturadas que beneficiam o coração.</li>
+                    <li><strong>Antioxidantes:</strong> Protegem as células contra danos dos radicais livres.</li>
+                    <li><strong>Fonte de Vitaminas:</strong> Contêm vitamina E, que promove a saúde da pele.</li>
+                    <li><strong>Controle do Peso:</strong> As castanhas ajudam na sensação de saciedade.</li>
+                    <li><strong>Proteínas:</strong> São uma ótima fonte de proteínas vegetais.</li>
+                </ul>
+            </div>
+        </div>
     </section>
+
+    <!-- Rodapé do site -->
+    <footer>
+        <p>Conecte-se Conosco! Siga-nos no Instagram para mais dicas e novidades sobre produtos naturais: <strong>Verde Sabor</strong></p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
-
-  <p class="intro">A aveia é um dos alimentos mais saudáveis e versáteis.</p>
-  <button id="readMoreAveiaBtn" class="read-more-btn">Leia Mais</button>
-  <div id="moreInfoAveia" class="hidden">
-    <ul>
-      <li><strong>Rica em Fibras:</strong> A aveia contém um tipo específico de fibra chamada beta-glucana, que ajuda a reduzir os níveis de colesterol ruim (LDL) no sangue. Isso auxilia na prevenção de doenças cardíacas.</li>
-      <li><strong>Melhora a Digestão:</strong> As fibras também promovem um trânsito intestinal saudável, prevenindo a constipação e melhorando a digestão de maneira geral.</li>
-      <li><strong>Energia de Liberação Lenta:</strong> Devido ao seu baixo índice glicêmico, a aveia fornece energia de forma gradual, evitando picos de açúcar no sangue. Isso a torna uma excelente opção para quem precisa de energia ao longo do dia.</li>
-      <li><strong>Controle do Peso:</strong> Por ser rica em fibras, a aveia aumenta a sensação de saciedade, ajudando a controlar o apetite e o peso corporal.</li>
-      <li><strong>Fonte de Nutrientes:</strong> A aveia contém importantes vitaminas e minerais, como magnésio, ferro, e vitaminas do complexo B, que são essenciais para o metabolismo e saúde do sistema nervoso.</li>
-    </ul>
-  </div>
-</section>
-
-  <img src="imagens/minha-imagem.jpg" alt="Descrição da imagem" class="minha-imagem">
