@@ -1,354 +1,75 @@
-/* Definindo variáveis de cores */
-:root {
-  --primary-color: #4CAF50; /* Verde */
-  --secondary-color: #8BC34A; /* Verde claro */
-  --accent-color: #FFEB3B; /* Amarelo para destaques */
-  --background-color: #F9F9F9; /* Cor do fundo */
-  --text-color: #333; /* Cor do texto */
-}
-
+/* Estilos Globais */
 body {
-  font-family: 'Poppins', sans-serif;
-  background-color: var(--background-color);
-  color: var(--text-color);
-  margin: 0;
-  padding: 0;
-  line-height: 1.6;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
 }
 
-h2 {
-  color: var(--primary-color);
-  font-size: 2rem;
-  margin-bottom: 10px;
-  text-align: center;
-}
-
-h3 {
-  color: var(--secondary-color);
-  font-size: 1.5rem;
-  text-align: center;
-}
-/* Estilos da seção de benefícios */
-.benefits-section {
-  background-color: var(--background-color, #F9F9F9);
-  padding: 40px;
-  margin: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.benefits-section h2 {
-  text-align: center;
-  color: var(--primary-color, #4CAF50);
-  margin-bottom: 20px;
-  font-size: 2rem;
-}
-
-/* Estilizando os alimentos e alinhando à esquerda */
-.food-item {
-  background-color: white;
-  margin-bottom: 20px;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  display: flex;
-  align-items: flex-start;
-}
-
-.food-item h3 {
-  color: var(--primary-color, #4CAF50);
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-  flex: 1; /* Garante que o título fique na esquerda */
-  text-align: left; /* Alinha o texto à esquerda */
-}
-
-.food-item p {
-  color: var(--text-color, #333);
-  font-size: 1rem;
-  text-align: justify;
-  flex: 3; /* Dá mais espaço para o texto */
-}
-
-/* Adicionar uma transição suave ao passar o mouse */
-.food-item:hover {
-  transform: scale(1.02);
-  transition: transform 0.3s ease;
-}
-
-/* Responsividade para telas menores */
-@media (max-width: 768px) {
-  .benefits-section {
+/* Cabeçalho */
+header {
+    text-align: center;
+    background-color: #4CAF50;
+    color: white;
     padding: 20px;
-  }
-
-  .food-item {
-    flex-direction: column; /* Em telas pequenas, os títulos e textos ficam empilhados */
-  }
-
-  .food-item h3 {
-    font-size: 1.3rem;
-  }
-
-  .food-item p {
-    font-size: 0.9rem;
-  }
 }
 
+h1 {
+    margin: 0;
+}
 
 p {
-  font-size: 1rem;
-  margin: 10px 0;
-  text-align: justify;
+    margin: 10px 0;
 }
 
-a {
-  color: var(--accent-color);
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s;
-}
-
-a:hover {
-  color: var(--primary-color);
-}
-
-.highlight {
-  color: var(--accent-color);
-  font-weight: bold;
-}
-
-.tagline {
-  font-style: italic;
-  color: var(--secondary-color);
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-/* Seções */
-.connect-section, .about-section, .products-section, .social-section {
-  background-color: white;
-  margin: 20px;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.products-section {
-  background-color: var(--secondary-color);
-  color: white;
-  padding: 30px;
-  text-align: center;
-}
-
-.products-section p {
-  font-size: 1.2rem;
-}
-
-button {
-  background-color: var(--primary-color);
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-button:hover {
-  background-color: var(--secondary-color);
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-  h2 {
-    font-size: 1.8rem;
-  }
-
-  p {
-    font-size: 0.9rem;
-  }
-}
-/* Estilos da seção de benefícios */
-.benefits-section {
-  background-color: var(--background-color, #F9F9F9);
-  padding: 40px;
-  margin: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.benefits-section h2 {
-  text-align: center;
-  color: var(--primary-color, #4CAF50);
-  margin-bottom: 20px;
-  font-size: 2rem;
-}
-
-.food-item {
-  background-color: white;
-  margin-bottom: 20px;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.food-item h3 {
-  color: var(--primary-color, #4CAF50);
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-}
-
-.food-item p {
-  color: var(--text-color, #333);
-  font-size: 1rem;
-  text-align: justify;
-}
-
-/* Adicionar uma transição suave ao passar o mouse */
-.food-item:hover {
-  transform: scale(1.02);
-  transition: transform 0.3s ease;
-}
-
-/* Responsividade para telas menores */
-@media (max-width: 768px) {
-  .benefits-section {
+/* Seção de Produtos */
+.produtos {
     padding: 20px;
-  }
-
-  .food-item {
-    margin-bottom: 15px;
-  }
-
-  .benefits-section h2 {
-    font-size: 1.8rem;
-  }
-
-  .food-item h3 {
-    font-size: 1.3rem;
-  }
-
-  .food-item p {
-    font-size: 0.9rem;
-  }
+    text-align: center;
 }
 
-/* Parte da Aveia (leia mais) */
-body {
-  font-family: 'Poppins', sans-serif;
-  margin: 0;
-  padding: 20px;
-  background-color: #f9f9f9;
+.produto-item {
+    margin-bottom: 40px;
 }
 
-h2 {
-  color: #4CAF50;
-  text-align: center;
+.food-image {
+    width: 300px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
 }
 
-.intro {
-  text-align: center;
-  font-size: 1.2rem;
-  margin-bottom: 20px;
+h3.green-text {
+    color: #4CAF50;
 }
 
+/* Botão Leia Mais */
 .read-more-btn {
-  display: block;
-  margin: 0 auto;
-  padding: 10px 20px;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
 }
 
 .read-more-btn:hover {
-  background-color: #45a049;
+    background-color: #45a049;
 }
 
+/* Informações escondidas */
 .hidden {
-  display: none;
+    display: none;
 }
 
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 20px auto;
-  max-width: 600px;
-  font-size: 1rem;
+/* Rodapé */
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
 }
-
-ul li {
-  margin: 10px 0;
-  color: #333;
-}
-
-ul li strong {
-  color: #4CAF50;
-}
-/* Estilos básicos */
-body {
-  font-family: 'Poppins', sans-serif;
-  margin: 0;
-  padding: 20px;
-  background-color: #f9f9f9;
-}
-
-h2 {
-  color: #4CAF50;
-  text-align: center;
-}
-
-.intro {
-  text-align: center;
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-}
-
-.read-more-btn {
-  display: block;
-  margin: 0 auto;
-  padding: 10px 20px;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1rem;
-}
-
-.read-more-btn:hover {
-  background-color: #45a049;
-}
-
-.hidden {
-  display: none;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 20px auto;
-  max-width: 600px;
-  font-size: 1rem;
-}
-
-ul li {
-  margin: 10px 0;
-  color: #333;
-}
-
-ul li strong {
-  color: #4CAF50;
-}
-
-.minha-imagem {
-  width: 300px; /* Ajusta a largura da imagem */
-  height: auto; /* Mantém a proporção */
-  display: block;
-  margin: 0 auto; /* Centraliza a imagem na tela */
-}
-
