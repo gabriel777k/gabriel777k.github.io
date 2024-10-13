@@ -7,11 +7,19 @@ body {
     padding: 0;
 }
 
+/* Menu Fixo */
 header {
     background-color: #4CAF50;
     padding: 20px;
-    text-align: center;
     color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    text-align: center;
 }
 
 nav ul {
@@ -20,24 +28,29 @@ nav ul {
     padding: 0;
     display: flex;
     justify-content: center;
-}
-
-nav ul li {
-    margin: 0 15px;
+    gap: 15px;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
+    padding: 10px 20px;
+    display: block;
 }
 
+nav ul li a:hover {
+    background-color: #45a049;
+}
+
+/* Banner */
 .banner {
     background-image: url('imagens/banner.jpg');
     background-size: cover;
     background-position: center;
     text-align: center;
-    padding: 60px 20px;
+    padding: 80px 20px;
     color: white;
+    margin-top: 60px;
 }
 
 .banner-text h2 {
@@ -53,37 +66,19 @@ nav ul li a {
     cursor: pointer;
 }
 
-.produtos {
+.btn-banner:hover {
+    background-color: #e60000;
+}
+
+/* Seção de Destaques */
+.destaques {
     padding: 50px 20px;
     text-align: center;
+    background-color: #f4f4f4;
 }
 
-.product-grid {
+.carousel {
     display: flex;
-    flex-wrap: wrap;
     gap: 20px;
-    justify-content: center;
-}
-
-.product-card {
-    background-color: white;
-    border: 1px solid #ddd;
-    padding: 20px;
-    width: 250px;
-    text-align: center;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.product-image {
-    width: 100%;
-    height: auto;
-    margin-bottom: 15px;
-}
-
-h3 {
-    color: #4CAF50;
-}
-
-.btn-leia-mais {
-    background
+    overflow-x: scroll;
+    scroll
