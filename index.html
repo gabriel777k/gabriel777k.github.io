@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Verde Sabor - Produtos Naturais</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header>
@@ -30,27 +31,141 @@
                 <img src="images/aveia.jpg" alt="Aveia">
                 <h3>Aveia</h3>
                 <p>A aveia é rica em fibras e promove uma digestão saudável. Ideal para quem quer mais energia ao longo do dia.</p>
+                <button onclick="toggleBenefits('aveia-benefits')">Leia mais</button>
+                <div id="aveia-benefits" class="hidden">
+                    <h4>Benefícios da Aveia:</h4>
+                    <ul>
+                        <li>Rica em fibras, ajuda na redução do colesterol.</li>
+                        <li>Melhora a digestão e previne a constipação.</li>
+                        <li>Fornece energia de liberação lenta.</li>
+                        <li>Aumenta a sensação de saciedade.</li>
+                        <li>Fonte de importantes vitaminas e minerais.</li>
+                    </ul>
+                </div>
             </div>
 
             <div class="product-card">
-                <img src="images/castanha.jpg" alt="Castanha">
+                <img src="images/castanha.jpg" alt="Castanha-do-Pará">
                 <h3>Castanha-do-Pará</h3>
                 <p>Fonte de selênio e antioxidantes. Perfeita para melhorar a saúde cardiovascular e fortalecer o sistema imunológico.</p>
+                <button onclick="toggleBenefits('castanha-benefits')">Leia mais</button>
+                <div id="castanha-benefits" class="hidden">
+                    <h4>Benefícios das Castanhas:</h4>
+                    <ul>
+                        <li>Ricas em gorduras saudáveis e proteínas.</li>
+                        <li>Ajudam a controlar o colesterol.</li>
+                        <li>Promovem a saúde do coração.</li>
+                        <li>Contêm antioxidantes que combatem os radicais livres.</li>
+                        <li>Ajudam no controle do peso e na saciedade.</li>
+                    </ul>
+                </div>
             </div>
 
-            <!-- Adicione mais cards de produtos aqui -->
-        </div>
-    </main>
+            <!-- Adicione mais produtos aqui -->
+            <div class="product-card">
+                <img src="images/gengibre.jpg" alt="Gengibre">
+                <h3>Gengibre</h3>
+                <p>O gengibre é conhecido por suas propriedades anti-inflamatórias e digestivas.</p>
+                <button onclick="toggleBenefits('gengibre-benefits')">Leia mais</button>
+                <div id="gengibre-benefits" class="hidden">
+                    <h4>Benefícios do Gengibre:</h4>
+                    <ul>
+                        <li>Ajuda na digestão e alivia náuseas.</li>
+                        <li>Possui propriedades anti-inflamatórias.</li>
+                        <li>Contribui para o fortalecimento do sistema imunológico.</li>
+                        <li>Pode ajudar a reduzir a dor muscular.</li>
+                        <li>Estímulo à circulação sanguínea.</li>
+                    </ul>
+                </div>
+            </div>
 
-    <footer>
-        <p>&copy; 2024 Verde Sabor. Todos os direitos reservados.</p>
-    </footer>
+            <div class="product-card">
+                <img src="images/soja.jpg" alt="Soja">
+                <h3>Soja</h3>
+                <p>A soja é uma excelente fonte de proteína e pode substituir a carne.</p>
+                <button onclick="toggleBenefits('soja-benefits')">Leia mais</button>
+                <div id="soja-benefits" class="hidden">
+                    <h4>Benefícios da Soja:</h4>
+                    <ul>
+                        <li>Rica em proteínas de alta qualidade.</li>
+                        <li>Contém isoflavonas que ajudam a equilibrar os hormônios.</li>
+                        <li>Promove a saúde cardiovascular.</li>
+                        <li>Ajuda no controle do colesterol.</li>
+                        <li>Fonte de fibras que ajudam na digestão.</li>
+                    </ul>
+                </div>
+            </div>
 
-    <script>
-        function toggleMenu() {
-            var navLinks = document.getElementById('navLinks');
-            navLinks.classList.toggle('active');
-        }
-    </script>
-</body>
-</html>
+            <div class="product-card">
+                <img src="images/cacau.jpg" alt="Cacau">
+                <h3>Cacau</h3>
+                <p>O cacau é rico em antioxidantes e pode melhorar o humor.</p>
+                <button onclick="toggleBenefits('cacau-benefits')">Leia mais</button>
+                <div id="cacau-benefits" class="hidden">
+                    <h4>Benefícios do Cacau:</h4>
+                    <ul>
+                        <li>Rico em flavonoides que ajudam na saúde do coração.</li>
+                        <li>Melhora o fluxo sanguíneo e reduz a pressão arterial.</li>
+                        <li>Pode melhorar o humor e reduzir o estresse.</li>
+                        <li>Ajuda a proteger a pele dos danos solares.</li>
+                        <li>Fonte de minerais como magnésio e ferro.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="images/linhaça.jpg" alt="Linhaça">
+                <h3>Linhaça</h3>
+                <p>A linhaça é rica em ômega-3 e ajuda na digestão.</p>
+                <button onclick="toggleBenefits('linhaca-benefits')">Leia mais</button>
+                <div id="linhaca-benefits" class="hidden">
+                    <h4>Benefícios da Linhaça:</h4>
+                    <ul>
+                        <li>Rica em ácidos graxos ômega-3.</li>
+                        <li>Aumenta a saciedade e ajuda no controle de peso.</li>
+                        <li>Promove a saúde do coração.</li>
+                        <li>Melhora a saúde intestinal.</li>
+                        <li>Possui propriedades anti-inflamatórias.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="images/quinoa.jpg" alt="Quinoa">
+                <h3>Quinoa</h3>
+                <p>A quinoa é uma proteína completa e rica em fibras.</p>
+                <button onclick="toggleBenefits('quinoa-benefits')">Leia mais</button>
+                <div id="quinoa-benefits" class="hidden">
+                    <h4>Benefícios da Quinoa:</h4>
+                    <ul>
+                        <li>Rica em proteínas e aminoácidos essenciais.</li>
+                        <li>Contém antioxidantes e ajuda na redução da inflamação.</li>
+                        <li>Promove a saúde digestiva e o controle de peso.</li>
+                        <li>É naturalmente sem glúten.</li>
+                        <li>Fonte de vitaminas e minerais importantes.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="images/maca.jpg" alt="Maçã">
+                <h3>Maçã</h3>
+                <p>A maçã é uma excelente opção de lanche, rica em fibras e vitaminas.</p>
+                <button onclick="toggleBenefits('maca-benefits')">Leia mais</button>
+                <div id="maca-benefits" class="hidden">
+                    <h4>Benefícios da Maçã:</h4>
+                    <ul>
+                        <li>Ajuda a regular o colesterol.</li>
+                        <li>Rica em fibras que promovem a saciedade.</li>
+                        <li>Contém antioxidantes que combatem radicais livres.</li>
+                        <li>Melhora a saúde do coração.</li>
+                        <li>Contribui para a saúde digestiva.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="images/abacate.jpg" alt="Abacate">
+                <h3>Abacate</h3>
+                <p>O abacate é uma fruta rica em gorduras saudáveis.</p>
+                <button onclick="toggleBenefits('abacate-benefits')">Leia mais
