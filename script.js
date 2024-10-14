@@ -13,3 +13,11 @@ document.querySelectorAll('.btn-leia-mais').forEach(function(button) {
         }
     });
 });
+function toggleInfo(infoId) {
+    const infoDiv = document.getElementById(infoId);
+    if (infoDiv.classList.contains('hidden')) {
+        infoDiv.classList.remove('hidden');
+    } else {
+        infoDiv.classList.add('hidden');
+    }
+}
