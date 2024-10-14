@@ -1,23 +1,13 @@
-// Função para exibir/ocultar informações de cada produto
-document.querySelectorAll('.btn-leia-mais').forEach(function(button) {
-    button.addEventListener('click', function() {
-        var targetId = this.getAttribute('data-target');
-        var targetElement = document.getElementById(targetId);
-        
-        if (targetElement.style.display === "none" || targetElement.style.display === "") {
-            targetElement.style.display = "block";
-            this.textContent = "Leia Menos";
+document.querySelectorAll('.leia-mais').forEach(button => {
+    button.addEventListener('click', () => {
+        const hiddenContent = button.nextElementSibling;
+        if (hiddenContent.classList.contains('hidden')) {
+            hiddenContent.classList.remove('hidden');
+            button.textContent = 'Leia menos';
         } else {
-            targetElement.style.display = "none";
-            this.textContent = "Leia Mais";
+            hiddenContent.classList.add('hidden');
+            button.textContent = 'Leia mais';
         }
     });
 });
-function toggleInfo(infoId) {
-    const infoDiv = document.getElementById(infoId);
-    if (infoDiv.classList.contains('hidden')) {
-        infoDiv.classList.remove('hidden');
-    } else {
-        infoDiv.classList.add('hidden');
-    }
-}
+
