@@ -6,3 +6,52 @@
     margin: 0 auto; /* Centraliza a imagem */
     display: block;
 }
+
+/* Estilos do menu hambúrguer */
+.menu-icon {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-links li {
+    display: inline-block;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px;
+}
+
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block; /* Exibe o ícone no mobile */
+    }
+
+    .nav-links {
+        display: none; /* Esconde as links do menu no mobile */
+        flex-direction: column;
+        background-color: #f4f4f4;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+    }
+
+    .nav-links.active {
+        display: flex; /* Exibe o menu quando ativado */
+    }
+
+    .nav-links li {
+        text-align: center;
+        padding: 10px;
+    }
+}
+
