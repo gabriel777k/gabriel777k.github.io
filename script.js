@@ -25,3 +25,12 @@ document.querySelectorAll('nav a').forEach(anchor => {
         }
     });
 });
+menu de hamburger
+function toggleMenu() {
+    var menuLateral = document.getElementById("menuLateral");
+    if (menuLateral.style.width === "250px") {
+        menuLateral.style.width = "0";
+    } else {
+        menuLateral.style.width = "250px";
+    }
+}
