@@ -17,6 +17,7 @@
             <ul>
                 <li><a href="#produtos">Produtos</a></li>
                 <li><a href="#sobre">Sobre Nós</a></li>
+                <li><a href="#relatos">Relatos</a></li>
                 <li><a href="#contato">Contato</a></li>
             </ul>
         </nav>
@@ -29,117 +30,60 @@
         <a href="#castanha">Castanha</a>
         <a href="#soja">Soja</a>
         <a href="#gengibre">Gengibre</a>
+        <!-- Adicione aqui outros alimentos -->
         <a href="#outros">Outros Alimentos</a>
     </div>
 
-    <!-- Seção principal -->
+    <!-- Seção de produtos -->
     <section id="produtos">
         <h2>Nossos Produtos Naturais</h2>
-        <!-- Seus produtos aqui -->
+
+        <!-- Exemplo de um alimento com botão "Leia Mais" -->
+        <div class="produto">
+            <h3>Aveia</h3>
+            <img src="aveia.jpg" alt="Aveia">
+            <p>A aveia é rica em fibras, ajuda a reduzir o colesterol e melhora a digestão.</p>
+            <button onclick="toggleLeiaMais('aveiaMais')">Leia Mais</button>
+            <div id="aveiaMais" class="leia-mais">
+                <p>A aveia contém beta-glucana, que reduz o colesterol LDL. Melhora a digestão e fornece energia de liberação lenta.</p>
+            </div>
+        </div>
+
+        <div class="produto">
+            <h3>Castanha</h3>
+            <img src="castanha.jpg" alt="Castanha">
+            <p>Ricas em antioxidantes e gorduras saudáveis, as castanhas são ótimas para o coração.</p>
+            <button onclick="toggleLeiaMais('castanhaMais')">Leia Mais</button>
+            <div id="castanhaMais" class="leia-mais">
+                <p>As castanhas ajudam a reduzir inflamações, são uma boa fonte de magnésio, promovendo a saúde do sistema cardiovascular.</p>
+            </div>
+        </div>
+
+        <!-- Adicione mais produtos aqui -->
+
     </section>
-            </ul>
-        </nav>
-    </header>
 
-    <main class="main-content">
-        <section id="produtos" class="product-grid">
-            <article class="product-card">
-                <img src="images/aveia.jpg" alt="Aveia">
-                <h2>Aveia</h2>
-                <p>A aveia é um dos alimentos mais saudáveis e versáteis.</p>
-                <button class="leia-mais">Leia mais</button>
-                <div class="hidden">
-                    <p>Rica em Fibras: A aveia contém um tipo específico de fibra chamada beta-glucana, que ajuda a reduzir os níveis de colesterol ruim (LDL) no sangue.</p>
-                    <p>Melhora a Digestão: As fibras promovem um trânsito intestinal saudável.</p>
-                    <p>Energia de Liberação Lenta: A aveia fornece energia de forma gradual.</p>
-                    <p>Controle do Peso: Aumenta a sensação de saciedade.</p>
-                    <p>Fonte de Nutrientes: Contém importantes vitaminas e minerais.</p>
-                </div>
-            </article>
+    <!-- Seção de Relatos -->
+    <section id="relatos">
+        <h2>Relatos dos Nossos Clientes</h2>
+        <div class="relato">
+            <p>"Os produtos são maravilhosos! Tenho mais disposição e saúde."</p>
+            <p>- Maria da Silva</p>
+        </div>
+        <div class="relato">
+            <p>"A qualidade dos alimentos é incrível, tudo muito natural e fresco!"</p>
+            <p>- João Pereira</p>
+        </div>
+    </section>
 
-            <article class="product-card">
-                <img src="images/castanhas.jpg" alt="Castanhas">
-                <h2>Castanhas</h2>
-                <p>As castanhas são ricas em nutrientes e saudáveis.</p>
-                <button class="leia-mais">Leia mais</button>
-                <div class="hidden">
-                    <p>Ricas em Antioxidantes: Ajudam a proteger as células.</p>
-                    <p>Benefícios Cardíacos: Aumentam o colesterol bom (HDL).</p>
-                    <p>Fonte de Energia: Fornecem energia rápida e duradoura.</p>
-                    <p>Saúde Mental: Contribuem para a função cerebral.</p>
-                    <p>Vitaminas e Minerais: Contêm magnésio e selênio.</p>
-                </div>
-            </article>
-<div class="product-card">
-                <img src="images/gengibre.jpg" alt="Gengibre">
-                <h3>Gengibre</h3>
-                <p>O gengibre é conhecido por suas propriedades anti-inflamatórias e digestivas.</p>
-                <button onclick="toggleBenefits('gengibre-benefits')">Leia mais</button>
-                <div id="gengibre-benefits" class="hidden">
-                    <h4>Benefícios do Gengibre:</h4>
-                    <ul>
-                        <li>Ajuda na digestão e alivia náuseas.</li>
-                        <li>Possui propriedades anti-inflamatórias.</li>
-                        <li>Contribui para o fortalecimento do sistema imunológico.</li>
-                        <li>Pode ajudar a reduzir a dor muscular.</li>
-                        <li>Estímulo à circulação sanguínea.</li>
-                    </ul>
-               </article>
-                    <div class="product-card">
-                <img src="images/soja.jpg" alt="Soja">
-                <h3>Soja</h3>
-                <p>A soja é uma excelente fonte de proteína e pode substituir a carne.</p>
-                <button onclick="toggleBenefits('soja-benefits')">Leia mais</button>
-                <div id="soja-benefits" class="hidden">
-                    <h4>Benefícios da Soja:</h4>
-                    <ul>
-                        <li>Rica em proteínas de alta qualidade.</li>
-                        <li>Contém isoflavonas que ajudam a equilibrar os hormônios.</li>
-                        <li>Promove a saúde cardiovascular.</li>
-                        <li>Ajuda no controle do colesterol.</li>
-                        <li>Fonte de fibras que ajudam na digestão.</li>
-                    </ul>
-        </article>
-                    <div class="product-card">
-                <img src="images/cacau.jpg" alt="Cacau">
-                <h3>Cacau</h3>
-                <p>O cacau é rico em antioxidantes e pode melhorar o humor.</p>
-                <button onclick="toggleBenefits('cacau-benefits')">Leia mais</button>
-                <div id="cacau-benefits" class="hidden">
-                    <h4>Benefícios do Cacau:</h4>
-                    <ul>
-                        <li>Rico em flavonoides que ajudam na saúde do coração.</li>
-                        <li>Melhora o fluxo sanguíneo e reduz a pressão arterial.</li>
-                        <li>Pode melhorar o humor e reduzir o estresse.</li>
-                        <li>Ajuda a proteger a pele dos danos solares.</li>
-                        <li>Fonte de minerais como magnésio e ferro.</li>
-                    </ul>
-                </article>
-                </div>
+    <!-- Seção de Contato -->
+    <section id="contato">
+        <h2>Entre em Contato</h2>
+        <p>Quer saber mais? Mande uma mensagem pelo WhatsApp ou visite nosso Instagram!</p>
+        <a href="https://api.whatsapp.com/send?phone=51985480872" target="_blank" class="btn-contato">WhatsApp</a>
+        <a href="https://www.instagram.com/gb.vp07" target="_blank" class="btn-contato">Instagram</a>
+    </section>
 
-            <div class="product-card">
-                <img src="images/linhaça.jpg" alt="Linhaça">
-                <h3>Linhaça</h3>
-                <p>A linhaça é rica em ômega-3 e ajuda na digestão.</p>
-                <button onclick="toggleBenefits('linhaca-benefits')">Leia mais</button>
-                <div id="linhaca-benefits" class="hidden">
-                    <h4>Benefícios da Linhaça:</h4>
-                    <ul>
-                        <li>Rica em ácidos graxos ômega-3.</li>
-                        <li>Aumenta a saciedade e ajuda no controle de peso.</li>
-                        <li>Promove a saúde do coração.</li>
-                        <li>Melhora a saúde intestinal.</li>
-                        <li>Possui propriedades anti-inflamatórias.</li>
-                    </ul>
-                </article>
-                </div>
-        </section>
-    </main>
-
-    <footer>
-        <p>© 2024 Verde Sabor. Todos os direitos reservados.</p>
-    </footer>
-
-    <script src="script.js"></script>
+    <script src="scripts.js"></script>
 </body>
 </html>
