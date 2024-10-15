@@ -7,83 +7,101 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-    <!-- Cabeçalho com logo e menu de hambúrguer -->
+    <!-- Cabeçalho -->
     <header>
-        <img src="logo.jpg" alt="Logo Verde Sabor" class="logo">
-        <!-- Ícone de três pontinhos -->
-        <span class="menu-icon" onclick="toggleMenu()">&#9776;</span>
-        <nav>
-            <ul>
-                <li><a href="#produtos">Produtos</a></li>
-                <li><a href="#sobre">Sobre Nós</a></li>
-                <li><a href="#relatos">Relatos</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
+        <div class="logo">
+            <img src="logo.jpg" alt="Logo Verde Sabor">
+        </div>
+        <nav class="navbar">
+            <a href="#frutas">Frutas</a>
+            <a href="#sementes">Sementes</a>
+            <a href="#graos">Grãos</a>
+            <a href="#vegetais">Vegetais</a>
         </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="Pesquisar produtos...">
+            <button>Buscar</button>
+        </div>
+        <div class="user-options">
+            <a href="#login">Login</a>
+            <a href="#carrinho">Carrinho</a>
+            <a href="https://instagram.com/gb.vp07">Instagram</a>
+        </div>
     </header>
 
-    <!-- Menu lateral (sidebar) para as categorias de alimentos -->
-    <div id="menuLateral" class="menu-lateral">
-        <a href="javascript:void(0)" class="closebtn" onclick="toggleMenu()">&times;</a>
-        <a href="#aveia">Aveia</a>
-        <a href="#castanha">Castanha</a>
-        <a href="#soja">Soja</a>
-        <a href="#gengibre">Gengibre</a>
-        <!-- Adicione aqui outros alimentos -->
-        <a href="#outros">Outros Alimentos</a>
-    </div>
-
-    <!-- Seção de produtos -->
-    <section id="produtos">
-        <h2>Nossos Produtos Naturais</h2>
-
-        <!-- Exemplo de um alimento com botão "Leia Mais" -->
-        <div class="produto">
-            <h3>Aveia</h3>
-            <img src="aveia.jpg" alt="Aveia">
-            <p>A aveia é rica em fibras, ajuda a reduzir o colesterol e melhora a digestão.</p>
-            <button onclick="toggleLeiaMais('aveiaMais')">Leia Mais</button>
-            <div id="aveiaMais" class="leia-mais">
-                <p>A aveia contém beta-glucana, que reduz o colesterol LDL. Melhora a digestão e fornece energia de liberação lenta.</p>
-            </div>
+    <!-- Banner Principal -->
+    <section class="banner">
+        <img src="banner.jpg" alt="Banner de Produtos Naturais">
+        <div class="banner-text">
+            <h1>Explore os Melhores Produtos Naturais</h1>
+            <p>Descubra alimentos saudáveis para uma vida mais equilibrada</p>
         </div>
-
-        <div class="produto">
-            <h3>Castanha</h3>
-            <img src="castanha.jpg" alt="Castanha">
-            <p>Ricas em antioxidantes e gorduras saudáveis, as castanhas são ótimas para o coração.</p>
-            <button onclick="toggleLeiaMais('castanhaMais')">Leia Mais</button>
-            <div id="castanhaMais" class="leia-mais">
-                <p>As castanhas ajudam a reduzir inflamações, são uma boa fonte de magnésio, promovendo a saúde do sistema cardiovascular.</p>
-            </div>
-        </div>
-
-        <!-- Adicione mais produtos aqui -->
-
     </section>
 
-    <!-- Seção de Relatos -->
+    <!-- Produtos Populares -->
+    <section class="produtos-populares">
+        <h2>Produtos Populares</h2>
+        <div class="produto-grid">
+            <div class="produto-item">
+                <img src="aveia.jpg" alt="Aveia">
+                <h3>Aveia</h3>
+                <p>R$ 12,00</p>
+                <button>Comprar Agora</button>
+            </div>
+            <div class="produto-item">
+                <img src="castanha.jpg" alt="Castanha">
+                <h3>Castanha</h3>
+                <p>R$ 18,00</p>
+                <button>Comprar Agora</button>
+            </div>
+            <!-- Adicione mais produtos aqui -->
+        </div>
+    </section>
+
+    <!-- Categorias -->
+    <section class="categorias">
+        <h2>Categorias</h2>
+        <div class="categorias-grid">
+            <div class="categoria-item">
+                <img src="frutas.jpg" alt="Frutas">
+                <h3>Frutas</h3>
+            </div>
+            <div class="categoria-item">
+                <img src="sementes.jpg" alt="Sementes">
+                <h3>Sementes</h3>
+            </div>
+            <div class="categoria-item">
+                <img src="graos.jpg" alt="Grãos">
+                <h3>Grãos</h3>
+            </div>
+            <div class="categoria-item">
+                <img src="vegetais.jpg" alt="Vegetais">
+                <h3>Vegetais</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Relatos -->
     <section id="relatos">
-        <h2>Relatos dos Nossos Clientes</h2>
-        <div class="relato">
-            <p>"Os produtos são maravilhosos! Tenho mais disposição e saúde."</p>
-            <p>- Maria da Silva</p>
-        </div>
-        <div class="relato">
-            <p>"A qualidade dos alimentos é incrível, tudo muito natural e fresco!"</p>
-            <p>- João Pereira</p>
+        <h2>O que nossos clientes dizem</h2>
+        <div class="relatos">
+            <p>"Os melhores produtos naturais que já experimentei! Recomendo a todos!" - João Silva</p>
+            <p>"Os alimentos chegaram fresquinhos e a qualidade é excelente!" - Maria Oliveira</p>
         </div>
     </section>
 
-    <!-- Seção de Contato -->
+    <!-- Contato -->
     <section id="contato">
-        <h2>Entre em Contato</h2>
-        <p>Quer saber mais? Mande uma mensagem pelo WhatsApp ou visite nosso Instagram!</p>
-        <a href="https://api.whatsapp.com/send?phone=51985480872" target="_blank" class="btn-contato">WhatsApp</a>
-        <a href="https://www.instagram.com/gb.vp07" target="_blank" class="btn-contato">Instagram</a>
+        <h2>Entre em contato</h2>
+        <p>Fale conosco pelo WhatsApp ou Instagram</p>
+        <a href="https://wa.me/5551985480872" class="contato-whatsapp">WhatsApp</a>
+        <a href="https://instagram.com/gb.vp07" class="contato-instagram">Instagram</a>
     </section>
 
-    <script src="scripts.js"></script>
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 Verde Sabor - Todos os direitos reservados</p>
+    </footer>
+
 </body>
 </html>
