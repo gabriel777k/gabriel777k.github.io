@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,17 +7,36 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+    <!-- Cabeçalho com logo e menu de hambúrguer -->
     <header>
-        <img src="images/logo.jpg" alt="Verde Sabor Logo" class="logo">
-    <h1>Verde Sabor</h1>
-    <p>Natural, Saudável e Sustentável</p>
-        </div>
+        <img src="logo.jpg" alt="Logo Verde Sabor" class="logo">
+        <!-- Ícone de três pontinhos -->
+        <span class="menu-icon" onclick="toggleMenu()">&#9776;</span>
         <nav>
             <ul>
                 <li><a href="#produtos">Produtos</a></li>
                 <li><a href="#sobre">Sobre Nós</a></li>
-                <li><a href="https://www.instagram.com/gb.vp07" target="_blank">Contato</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
 
+    <!-- Menu lateral (sidebar) para as categorias de alimentos -->
+    <div id="menuLateral" class="menu-lateral">
+        <a href="javascript:void(0)" class="closebtn" onclick="toggleMenu()">&times;</a>
+        <a href="#aveia">Aveia</a>
+        <a href="#castanha">Castanha</a>
+        <a href="#soja">Soja</a>
+        <a href="#gengibre">Gengibre</a>
+        <a href="#outros">Outros Alimentos</a>
+    </div>
+
+    <!-- Seção principal -->
+    <section id="produtos">
+        <h2>Nossos Produtos Naturais</h2>
+        <!-- Seus produtos aqui -->
+    </section>
             </ul>
         </nav>
     </header>
