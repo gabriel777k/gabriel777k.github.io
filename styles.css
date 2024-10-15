@@ -3,130 +3,152 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f9;
+    background-color: #f5f5f5;
     color: #333;
 }
 
-/* Cabeçalho e Navegação */
 header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: #4CAF50;
-    color: white;
     padding: 10px;
-    text-align: center;
-    position: relative;
-}
-
-header .logo {
-    width: 150px;
-    height: auto;
-    display: inline-block;
-}
-
-.menu-icon {
-    font-size: 30px;
-    cursor: pointer;
-    position: absolute;
-    right: 10px;
-    top: 10px;
-}
-
-/* Estilos do Menu Lateral (Sidebar) */
-.menu-lateral {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #333;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-}
-
-.menu-lateral a {
-    padding: 10px 15px;
-    text-decoration: none;
-    font-size: 25px;
     color: white;
-    display: block;
-    transition: 0.3s;
 }
 
-.menu-lateral a:hover {
-    background-color: #575757;
+header .logo img {
+    width: 150px;
 }
 
-.closebtn {
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+}
+
+.navbar a:hover {
+    background-color: #45a049;
+}
+
+.search-bar {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.search-bar input {
+    width: 300px;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.search-bar button {
+    padding: 8px 16px;
+    border: none;
+    background-color: #45a049;
+    color: white;
+    cursor: pointer;
+}
+
+.user-options a {
+    color: white;
+    padding: 0 10px;
+    text-decoration: none;
+}
+
+.banner {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background-color: #333;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.6;
+}
+
+.banner-text {
     position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-}
-
-/* Seção de Produtos */
-#produtos {
-    padding: 50px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
     text-align: center;
 }
 
-.produto {
-    margin: 20px 0;
+.produtos-populares {
+    padding: 40px;
+    background-color: white;
+    text-align: center;
 }
 
-.produto img {
+.produtos-populares h2 {
+    color: #4CAF50;
+}
+
+.produto-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.produto-item {
+    margin: 20px;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
     width: 200px;
-    height: auto;
-}
-
-.leia-mais {
-    display: none;
-}
-
-/* Estilos para Relatos */
-#relatos {
-    background-color: #f9f9f9;
-    padding: 50px;
     text-align: center;
 }
 
-.relato {
-    margin-bottom: 20px;
+.produto-item img {
+    width: 100px;
+    height: 100px;
 }
 
-/* Seção de Contato */
-#contato {
+.produto-item h3 {
+    color: #333;
+}
+
+.produto-item button {
     background-color: #4CAF50;
     color: white;
-    padding: 50px;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.produto-item button:hover {
+    background-color: #45a049;
+}
+
+.categorias {
+    padding: 40px;
+    background-color: #f0f0f0;
     text-align: center;
 }
 
-.btn-contato {
-    background-color: #fff;
-    color: #4CAF50;
-    padding: 10px 20px;
-    text-decoration: none;
-    margin: 10px;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+.categorias-grid {
+    display: flex;
+    justify-content: space-around;
 }
 
-.btn-contato:hover {
+.categoria-item {
+    margin: 20px;
+    text-align: center;
+}
+
+.categoria-item img {
+    width: 150px;
+    height: 150px;
+}
+
+footer {
     background-color: #333;
     color: white;
-}
-
-/* Responsividade */
-@media screen and (max-width: 768px) {
-    header {
-        text-align: left;
-    }
-    nav ul {
-        display: none;
-    }
-    .menu-icon {
-        display: block;
-    }
+    padding: 20px;
+    text-align: center;
 }
