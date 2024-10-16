@@ -20,6 +20,8 @@ import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/fir
 document.getElementById('login-btn').addEventListener('submit', function(e) {
   e.preventDefault(); // Previne o formulário de ser enviado
 
+console.log("Botão de login clicado");
+    
   var email = document.getElementById('email').value;
   var password = document.getElementById('password').value;
 
