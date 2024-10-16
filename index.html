@@ -30,6 +30,51 @@
   const analytics = getAnalytics(app);
 </script>
     
+<!-- Formulário de Login e Cadastro (adicione no seu HTML onde quiser) -->
+<form id="login-form">
+  <input type="email" id="login-email" placeholder="Digite seu e-mail">
+  <input type="password" id="login-password" placeholder="Digite sua senha">
+  <button type="button" id="login-btn">Login</button>
+  <button type="button" id="register-btn">Cadastrar</button>
+</form>
+
+<script type="module">
+  // Importar o Firebase Auth SDK
+  import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-auth.js";
+
+  // Inicializar o Firebase Auth
+  const auth = getAuth();
+
+  // Login
+  document.getElementById('login-btn').addEventListener('click', () => {
+    const email = document.getElementById('login-email').value;
+    const password = document.getElementById('login-password').value;
+    
+    signInWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        alert('Login realizado com sucesso!');
+      })
+      .catch((error) => {
+        alert('Erro no login: ' + error.message);
+      });
+  });
+
+  // Cadastro
+  document.getElementById('register-btn').addEventListener('click', () => {
+    const email = document.getElementById('login-email').value;
+    const password = document.getElementById('login-password').value;
+    
+    createUserWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        alert('Usuário cadastrado com sucesso!');
+      })
+      .catch((error) => {
+        alert('Erro no cadastro: ' + error.message);
+      });
+  });
+</script>
+
+    
     <!-- Cabeçalho -->
     <header>
         <div class="logo">
