@@ -1,34 +1,43 @@
 function toggleMenu() {
     var menuLateral = document.getElementById("menuLateral");
-    if (menuLateral.style.width === "250px") {
-        menuLateral.style.width = "0";
-    } else {
-        menuLateral.style.width = "250px";
+    menuLateral.style.width = (menuLateral.style.width === "250px") ? "0" : "250px";
+}
+
     }
 }
 
 function toggleLeiaMais(id) {
     var elemento = document.getElementById(id);
-    if (elemento.style.display === "block") {
-        elemento.style.display = "none";
-    } else {
-        elemento.style.display = "block";
+    elemento.style.display = (elemento.style.display === "block") ? "none" : "block";
+}
+
     }
 }
 
 import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-auth.js";
 
-// Função de login de exemplo
-const auth = getAuth();
-signInWithEmailAndPassword(auth, email, password)
-  .then((userCredential) => {
-    // Usuário logado
-    const user = userCredential.user;
-  })
-  .catch((error) => {
-    const errorCode = error.code;
-    const errorMessage = error.message;
-  });
+// Função de login com Firebase Auth
+document.getElementById('loginForm').addEventListener('submit', function(e) {
+  e.preventDefault(); // Previne o formulário de ser enviado
+
+  var email = document.getElementById('email').value;
+  var password = document.getElementById('password').value;
+
+  // Inicialize o auth aqui
+  const auth = getAuth();
+
+  signInWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+      // Usuário logado com sucesso
+      var user = userCredential.user;
+      alert("Login realizado com sucesso!");
+      modal.style.display = "none"; // Fecha o modal
+    })
+    .catch((error) => {
+      // Erro no login
+      alert("Erro no login: " + error.message);
+    });
+});
 
 <script type="module">
   // Import the functions you need from the SDKs you need
