@@ -77,3 +77,24 @@ window.onclick = function(event) {
   const app = initializeApp(firebaseConfig);
   const analytics = getAnalytics(app);
 </script>
+
+// Função para realizar login com Firebase
+document.getElementById('loginForm').addEventListener('submit', function(e) {
+  e.preventDefault(); // Previne o formulário de ser enviado
+
+  var email = document.getElementById('email').value;
+  var password = document.getElementById('password').value;
+
+  firebase.auth().signInWithEmailAndPassword(email, password)
+    .then((userCredential) => {
+      // Usuário logado com sucesso
+      var user = userCredential.user;
+      alert("Login realizado com sucesso!");
+      modal.style.display = "none"; // Fecha o modal
+    })
+    .catch((error) => {
+      // Erro no login
+      alert("Erro no login: " + error.message);
+    });
+});
+
