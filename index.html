@@ -8,16 +8,17 @@
 </head>
 <body>
     
-<!-- Firebase SDK, use type="module" -->
+<!-- Firebase SDK, tudo dentro de um único bloco -->
 <script type="module">
   // Importar o Firebase e Analytics SDK
   import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
   import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-analytics.js";
-  
+  import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-auth.js";
+
   // Configuração do Firebase
   const firebaseConfig = {
     apiKey: "AIzaSyDC3ZhmTqjd3P44uvuOeIQccNH8N5x20fE",
-    authDomain: "SEU_DOMÍNIO.firebaseapp.com",
+    authDomain: "verde-sabor.firebaseapp.com",
     projectId: "verde-sabor",
     storageBucket: "verde-sabor.appspot.com",
     messagingSenderId: "803708320712",
@@ -28,22 +29,7 @@
   // Inicializar Firebase
   const app = initializeApp(firebaseConfig);
   const analytics = getAnalytics(app);
-</script>
-    
-<!-- Formulário de Login e Cadastro (adicione no seu HTML onde quiser) -->
-<form id="login-form">
-  <input type="email" id="login-email" placeholder="Digite seu e-mail">
-  <input type="password" id="login-password" placeholder="Digite sua senha">
-  <button type="button" id="login-btn">Login</button>
-  <button type="button" id="register-btn">Cadastrar</button>
-</form>
-
-<script type="module">
-  // Importar o Firebase Auth SDK
-  import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-auth.js";
-
-  // Inicializar o Firebase Auth
-  const auth = getAuth();
+  const auth = getAuth(app);
 
   // Login
   document.getElementById('login-btn').addEventListener('click', () => {
@@ -73,26 +59,16 @@
       });
   });
 </script>
-
     
-    <!-- Cabeçalho -->
-    <header>
-        <div class="logo">
-            <img src="logo.jpg" alt="Logo Verde Sabor">
-        </div>
-        <nav class="navbar">
-            <a href="#frutas">Frutas</a>
-            <a href="#sementes">Sementes</a>
-            <a href="#graos">Grãos</a>
-            <a href="#vegetais">Vegetais</a>
-        </nav>
-        <div class="search-bar">
-            <input type="text" placeholder="Pesquisar produtos...">
-            <button>Buscar</button>
-        </div>
-        <div class="user-options">
-            <a href="#login">Login</a>
-            <!-- Modal de Login -->
+<!-- Formulário de Login e Cadastro -->
+<form id="login-form">
+  <input type="email" id="login-email" placeholder="Digite seu e-mail">
+  <input type="password" id="login-password" placeholder="Digite sua senha">
+  <button type="button" id="login-btn">Login</button>
+  <button type="button" id="register-btn">Cadastrar</button>
+</form>
+
+<!-- Modal de Login -->
 <div id="loginModal" class="modal">
   <div class="modal-content">
     <span class="close">&times;</span>
@@ -105,84 +81,60 @@
   </div>
 </div>
 
-            <a href="#carrinho">Carrinho</a>
-            <a href="https://instagram.com/gb.vp07">Instagram</a>
-        </div>
-    </header>
+<!-- Cabeçalho -->
+<header>
+  <div class="logo">
+    <img src="logo.jpg" alt="Logo Verde Sabor">
+  </div>
+  <nav class="navbar">
+    <a href="#frutas">Frutas</a>
+    <a href="#sementes">Sementes</a>
+    <a href="#graos">Grãos</a>
+    <a href="#vegetais">Vegetais</a>
+  </nav>
+  <div class="search-bar">
+    <input type="text" placeholder="Pesquisar produtos...">
+    <button>Buscar</button>
+  </div>
+  <div class="user-options">
+    <a href="#login">Login</a>
+    <a href="#carrinho">Carrinho</a>
+    <a href="https://instagram.com/gb.vp07">Instagram</a>
+  </div>
+</header>
 
-    <!-- Banner Principal -->
-    <section class="banner">
-        <img src="banner.jpg" alt="Banner de Produtos Naturais">
-        <div class="banner-text">
-            <h1>Explore os Melhores Produtos Naturais</h1>
-            <p>Descubra alimentos saudáveis para uma vida mais equilibrada</p>
-        </div>
-    </section>
+<!-- Banner Principal -->
+<section class="banner">
+  <img src="banner.jpg" alt="Banner de Produtos Naturais">
+  <div class="banner-text">
+    <h1>Explore os Melhores Produtos Naturais</h1>
+    <p>Descubra alimentos saudáveis para uma vida mais equilibrada</p>
+  </div>
+</section>
 
-    <!-- Produtos Populares -->
-    <section class="produtos-populares">
-        <h2>Produtos Populares</h2>
-        <div class="produto-grid">
-            <div class="produto-item">
-                <img src="aveia.jpg" alt="Aveia">
-                <h3>Aveia</h3>
-                <p>R$ 12,00</p>
-                <button>Comprar Agora</button>
-            </div>
-            <div class="produto-item">
-                <img src="castanha.jpg" alt="Castanha">
-                <h3>Castanha</h3>
-                <p>R$ 18,00</p>
-                <button>Comprar Agora</button>
-            </div>
-            <!-- Adicione mais produtos aqui -->
-        </div>
-    </section>
+<!-- Produtos Populares -->
+<section class="produtos-populares">
+  <h2>Produtos Populares</h2>
+  <div class="produto-grid">
+    <div class="produto-item">
+      <img src="aveia.jpg" alt="Aveia">
+      <h3>Aveia</h3>
+      <p>R$ 12,00</p>
+      <button>Comprar Agora</button>
+    </div>
+    <div class="produto-item">
+      <img src="castanha.jpg" alt="Castanha">
+      <h3>Castanha</h3>
+      <p>R$ 18,00</p>
+      <button>Comprar Agora</button>
+    </div>
+  </div>
+</section>
 
-    <!-- Categorias -->
-    <section class="categorias">
-        <h2>Categorias</h2>
-        <div class="categorias-grid">
-            <div class="categoria-item">
-                <img src="frutas.jpg" alt="Frutas">
-                <h3>Frutas</h3>
-            </div>
-            <div class="categoria-item">
-                <img src="sementes.jpg" alt="Sementes">
-                <h3>Sementes</h3>
-            </div>
-            <div class="categoria-item">
-                <img src="graos.jpg" alt="Grãos">
-                <h3>Grãos</h3>
-            </div>
-            <div class="categoria-item">
-                <img src="vegetais.jpg" alt="Vegetais">
-                <h3>Vegetais</h3>
-            </div>
-        </div>
-    </section>
-
-    <!-- Relatos -->
-    <section id="relatos">
-        <h2>O que nossos clientes dizem</h2>
-        <div class="relatos">
-            <p>"Os melhores produtos naturais que já experimentei! Recomendo a todos!" - João Silva</p>
-            <p>"Os alimentos chegaram fresquinhos e a qualidade é excelente!" - Maria Oliveira</p>
-        </div>
-    </section>
-
-    <!-- Contato -->
-    <section id="contato">
-        <h2>Entre em contato</h2>
-        <p>Fale conosco pelo WhatsApp ou Instagram</p>
-        <a href="https://wa.me/5551985480872" class="contato-whatsapp">WhatsApp</a>
-        <a href="https://instagram.com/gb.vp07" class="contato-instagram">Instagram</a>
-    </section>
-
-    <!-- Rodapé -->
-    <footer>
-        <p>&copy; 2024 Verde Sabor - Todos os direitos reservados</p>
-    </footer>
+<!-- Rodapé -->
+<footer>
+  <p>&copy; 2024 Verde Sabor - Todos os direitos reservados</p>
+</footer>
 
 </body>
 </html>
