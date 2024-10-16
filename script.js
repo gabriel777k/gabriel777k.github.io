@@ -17,7 +17,7 @@ function toggleLeiaMais(id) {
 import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-auth.js";
 
 // Função de login com Firebase Auth
-document.getElementById('loginForm').addEventListener('submit', function(e) {
+document.getElementById('login-btn').addEventListener('submit', function(e) {
   e.preventDefault(); // Previne o formulário de ser enviado
 
   var email = document.getElementById('email').value;
