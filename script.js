@@ -1,11 +1,28 @@
-// Função de pesquisa
-document.getElementById('searchBtn').addEventListener('click', function() {
-  const searchTerm = document.getElementById('searchInput').value.toLowerCase();
-  const productItems = document.querySelectorAll('.produto-item');
+// Pesquisa de produtos
+document.getElementById("search-btn").addEventListener("click", function() {
+    const searchInput = document.getElementById("search-input").value.toLowerCase();
+    const items = document.querySelectorAll(".produto-item h3");
 
-  productItems.forEach(function(item) {
-    const productName = item.getAttribute('data-name');
-    if (productName.includes(searchTerm)) {
-      item.style.display = 'block'; // Exibe o produto se o termo corresponder
-    } else {
-      item
+    items.forEach(item => {
+        const itemName = item.textContent.toLowerCase();
+        if (itemName.includes(searchInput)) {
+            item.parentElement.style.display = "block";
+        } else {
+            item.parentElement.style.display = "none";
+        }
+    });
+});
+
+// Modal de login
+const loginModal = document.getElementById("loginModal");
+const closeModal = document.getElementsByClassName("close")[0];
+
+closeModal.onclick = function() {
+  loginModal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == loginModal) {
+    loginModal.style.display = "none";
+  }
+}
