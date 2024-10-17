@@ -1,18 +1,4 @@
 <!-- Botão de Login -->
-<button id="loginButton">Login</button>
-
-<!-- Modal de Login -->
-<div id="loginModal" class="modal" style="display: none;">
-    <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2>Login</h2>
-        <form id="loginForm">
-            <input type="email" id="email" placeholder="Digite seu e-mail" required>
-            <input type="password" id="password" placeholder="Digite sua senha" required>
-            <button type="submit">Entrar</button>
-        </form>
-    </div>
-</div>
 
 <script type="module">
   // Importar Firebase SDK
@@ -33,46 +19,9 @@
   // Inicializa o Firebase
   const app = initializeApp(firebaseConfig);
   const auth = getAuth(app);
-
-  // Obter modal e elementos
-  var modal = document.getElementById("loginModal");
-  var btn = document.getElementById("loginButton");
-  var span = document.getElementsByClassName("close")[0];
-
-  // Abrir modal
-  btn.onclick = function() {
-      modal.style.display = "block";
   }
 
-  // Fechar modal
-  span.onclick = function() {
-      modal.style.display = "none";
-  }
-
-  // Fechar modal clicando fora
-  window.onclick = function(event) {
-      if (event.target == modal) {
-          modal.style.display = "none";
-      }
-  }
-
-  // Listener para o formulário de login
-  document.getElementById('loginForm').addEventListener('submit', function(e) {
-      e.preventDefault(); // Impede envio padrão do formulário
-
-      var email = document.getElementById('email').value;
-      var password = document.getElementById('password').value;
-
-      // Login usando Firebase Auth
-      signInWithEmailAndPassword(auth, email, password)
-          .then((userCredential) => {
-              // Login bem-sucedido
-              alert("Login realizado com sucesso!");
-              modal.style.display = "none"; // Fecha o modal após o login
-          })
-          .catch((error) => {
-              // Exibe erro de login
-              alert("Erro no login: " + error.message);
+ 
           });
   });
 </script>
