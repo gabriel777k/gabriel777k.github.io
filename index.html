@@ -1,104 +1,72 @@
-<!-- Botão de Login -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verde Sabor - Produtos Naturais</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    
+    <!-- Cabeçalho -->
+    <header>
+        <div class="logo">
+            <img src="images/logo.jpg" alt="Logo Verde Sabor">
+        </div>
+        <nav class="navbar">
+            <a href="index.html">Início</a>
+            <a href="pages/produtos.html">Produtos</a>
+            <a href="pages/login.html">Login</a>
+            <a href="pages/carrinho.html">Carrinho</a>
+        </nav>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Pesquisar produtos...">
+            <button id="searchBtn">Buscar</button>
+        </div>
+    </header>
 
-<script type="module">
-  // Importar Firebase SDK
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
-  import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-auth.js";
+    <!-- Banner Principal -->
+    <section class="banner">
+        <img src="images/banner.jpg" alt="Banner de Produtos Naturais">
+        <div class="banner-text">
+            <h1>Explore os Melhores Produtos Naturais</h1>
+            <p>Descubra alimentos saudáveis para uma vida mais equilibrada</p>
+        </div>
+    </section>
 
-  // Configuração Firebase
-  const firebaseConfig = {
-      apiKey: "AIzaSyDC3ZhmTqjd3P44uvuOeIQccNH8N5x20fE",
-      authDomain: "verde-sabor.firebaseapp.com",
-      projectId: "verde-sabor",
-      storageBucket: "verde-sabor.appspot.com",
-      messagingSenderId: "803708320712",
-      appId: "1:803708320712:web:e225c98666c67a73bb9efd",
-      measurementId: "G-C3FCXHE4RX"
-  };
+    <!-- Produtos Populares -->
+    <section class="produtos-populares">
+        <h2>Produtos Populares</h2>
+        <div class="produto-grid" id="productGrid">
+            <div class="produto-item" data-name="aveia">
+                <img src="images/aveia.jpg" alt="Aveia">
+                <h3>Aveia</h3>
+                <p>R$ 12,00</p>
+                <button>Comprar Agora</button>
+            </div>
+            <div class="produto-item" data-name="castanha">
+                <img src="images/castanha.jpg" alt="Castanha">
+                <h3>Castanha</h3>
+                <p>R$ 18,00</p>
+                <button>Comprar Agora</button>
+            </div>
+        </div>
+    </section>
 
-  // Inicializa o Firebase
-  const app = initializeApp(firebaseConfig);
-  const auth = getAuth(app);
-  }
+    <!-- Relatos -->
+    <section id="relatos">
+        <h2>O que nossos clientes dizem</h2>
+        <div class="relatos">
+            <p>"Os melhores produtos naturais que já experimentei!" - João Silva</p>
+            <p>"Qualidade excelente!" - Maria Oliveira</p>
+        </div>
+    </section>
 
- 
-          });
-  });
-</script>
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 Verde Sabor - Todos os direitos reservados</p>
+    </footer>
 
-<!-- Cabeçalho -->
-<header>
-  <div class="logo">
-    <img src="logo.jpg" alt="Logo Verde Sabor">
-  </div>
-  <nav class="navbar">
-    <a href="#frutas">Frutas</a>
-    <a href="#sementes">Sementes</a>
-    <a href="#graos">Grãos</a>
-    <a href="#vegetais">Vegetais</a>
-  </nav>
-  <div class="search-bar">
-    <input type="text" placeholder="Pesquisar produtos...">
-    <button>Buscar</button>
-  </div>
-  <div class="user-options">
-      <a href="login.html">Login</a>
-      <a href="#carrinho">Carrinho</a>
-      <a href="https://instagram.com/gb.vp07">Instagram</a>
-  </div>
-</header>
-
-<!-- Banner Principal -->
-<section class="banner">
-  <img src="banner.jpg" alt="Banner de Produtos Naturais">
-  <div class="banner-text">
-    <h1>Explore os Melhores Produtos Naturais</h1>
-    <p>Descubra alimentos saudáveis para uma vida mais equilibrada</p>
-      <link rel="stylesheet" href="styles.css"> <!-- CSS aqui -->
-  </div>
-</section>
-
-<!-- Produtos Populares -->
-<section class="produtos-populares">
-  <h2>Produtos Populares</h2>
-  <div class="produto-grid">
-    <div class="produto-item">
-      <img src="aveia.jpg" alt="Aveia">
-      <h3>Aveia</h3>
-      <p>R$ 12,00</p>
-      <button>Comprar Agora</button>
-    </div>
-    <div class="produto-item">
-      <img src="castanha.jpg" alt="Castanha">
-      <h3>Castanha</h3>
-      <p>R$ 18,00</p>
-      <button>Comprar Agora</button>
-    </div>
-  
-  </div>
-</section>
-
-<script>
-    // Função de pesquisa
-    document.getElementById('searchBtn').addEventListener('click', function() {
-      const searchTerm = document.getElementById('searchInput').value.toLowerCase();
-      const productItems = document.querySelectorAll('.produto-item');
-
-      productItems.forEach(function(item) {
-        const productName = item.getAttribute('data-name');
-        if (productName.includes(searchTerm)) {
-          item.style.display = 'block'; // Exibe o produto se o termo corresponder
-        } else {
-          item.style.display = 'none';  // Esconde o produto se o termo não corresponder
-        }
-      });
-    });
-  </script>
-
-<!-- Rodapé -->
-<footer>
-  <p>&copy; 2024 Verde Sabor - Todos os direitos reservados</p>
-</footer>
-
+    <script src="js/script.js"></script>
 </body>
 </html>
