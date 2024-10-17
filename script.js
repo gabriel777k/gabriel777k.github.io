@@ -108,5 +108,9 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
       // Erro no login
       alert("Erro no login: " + error.message);
     });
+
+const auth = getAuth(app);
+
+    
 });
 
