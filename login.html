@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Verde Sabor</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Reutilize o CSS -->
+</head>
+<body>
+    <header>
+        <h1>Verde Sabor - Login</h1>
+    </header>
+    
+    <section class="login-section">
+        <form id="login-form">
+            <h2>Faça seu Login</h2>
+            <input type="email" id="login-email" placeholder="Digite seu e-mail" required>
+            <input type="password" id="login-password" placeholder="Digite sua senha" required>
+            <button type="button" id="login-btn">Login</button>
+        </form>
+        
+        <form id="register-form">
+            <h2>Cadastre-se</h2>
+            <input type="email" id="register-email" placeholder="Digite seu e-mail" required>
+            <input type="password" id="register-password" placeholder="Digite sua senha" required>
+            <button type="button" id="register-btn">Cadastrar</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Verde Sabor - Todos os direitos reservados</p>
+    </footer>
+
+    <script type="module">
+      import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-auth.js";
+      
+      const auth = getAuth();
+
+      // Função de login
+      document.getElementById('login-btn').addEventListener('click', () => {
+        const email = document.getElementById('login-email').value;
+        const password = document.getElementById('login-password').value;
+        
+        signInWithEmailAndPassword(auth, email, password)
+          .then((userCredential) => {
+            alert('Login realizado com sucesso!');
+            // Redirecionar ou fazer outra ação
+          })
+          .catch((error) => {
+            alert('Erro no login: ' + error.message);
+          });
+      });
+
+      // Função de cadastro
+      document.getElementById('register-btn').addEventListener('click', () => {
+        const email = document.getElementById('register-email').value;
+        const password = document.getElementById('register-password').value;
+        
+        createUserWithEmailAndPassword(auth, email, password)
+          .then((userCredential) => {
+            alert('Usuário cadastrado com sucesso!');
+            // Redirecionar ou fazer outra ação
+          })
+          .catch((error) => {
+            alert('Erro no cadastro: ' + error.message);
+          });
+      });
+    </script>
+</body>
+</html>
