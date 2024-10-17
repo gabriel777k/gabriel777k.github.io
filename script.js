@@ -110,6 +110,7 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
     });
 
 const auth = getAuth(app);
+e.preventDefault(); // Previne o comportamento padrão
 
     
 });
