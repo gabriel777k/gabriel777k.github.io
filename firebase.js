@@ -1,10 +1,9 @@
-// Configurações do Firebase
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
-import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-auth.js";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-auth.js";
 
-// Configuração do seu Firebase
+// Configuração do Firebase
 const firebaseConfig = {
-    apiKey: "AIzaSyDC3ZhmTqjd3P44uvuOeIQccNH8N5x20fE",
+    apiKey: "SUA_API_KEY",
     authDomain: "verde-sabor.firebaseapp.com",
     projectId: "verde-sabor",
     storageBucket: "verde-sabor.appspot.com",
@@ -13,42 +12,37 @@ const firebaseConfig = {
     measurementId: "G-C3FCXHE4RX"
 };
 
-// Inicializar o Firebase
+// Inicializa o Firebase
 const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
+const auth = getAuth();
 
-// Função de Login
-document.getElementById('login-btn').addEventListener('click', function() {
-    const email = document.getElementById('login-email').value;
-    const password = document.getElementById('login-password').value;
+// Função de login
+document.getElementById('loginForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
 
     signInWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
-            // Login com sucesso
-            alert("Login realizado com sucesso!");
-            window.location.href = "produtos.html"; // Redireciona para a página de produtos
+            alert('Login realizado com sucesso!');
+            loginModal.style.display = "none";
         })
         .catch((error) => {
-            const errorCode = error.code;
-            const errorMessage = error.message;
-            alert("Erro no login: " + errorMessage);
+            alert('Erro no login: ' + error.message);
         });
 });
 
-// Função de Cadastro
+// Função de cadastro
 document.getElementById('register-btn').addEventListener('click', function() {
-    const email = document.getElementById('login-email').value;
-    const password = document.getElementById('login-password').value;
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
 
     createUserWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
-            // Cadastro com sucesso
-            alert("Cadastro realizado com sucesso!");
-            window.location.href = "produtos.html"; // Redireciona para a página de produtos
+            alert('Usuário cadastrado com sucesso!');
         })
         .catch((error) => {
-            const errorCode = error.code;
-            const errorMessage = error.message;
-            alert("Erro no cadastro: " + errorMessage);
+            alert('Erro no cadastro: ' + error.message);
         });
 });
