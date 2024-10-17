@@ -1,74 +1,4 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Verde Sabor - Produtos Naturais</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    
-<!-- Firebase SDK, tudo dentro de um único bloco -->
-<script type="module">
-  // Importar o Firebase e Analytics SDK
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-analytics.js";
-  import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-auth.js";
-
-  // Configuração do Firebase
-  const firebaseConfig = {
-    apiKey: "AIzaSyDC3ZhmTqjd3P44uvuOeIQccNH8N5x20fE",
-    authDomain: "verde-sabor.firebaseapp.com",
-    projectId: "verde-sabor",
-    storageBucket: "verde-sabor.appspot.com",
-    messagingSenderId: "803708320712",
-    appId: "1:803708320712:web:e225c98666c67a73bb9efd",
-    measurementId: "G-C3FCXHE4RX"
-  };
-
-  // Inicializar Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-  const auth = getAuth(app);
-
-  // Login
-  document.getElementById('login-btn').addEventListener('click', () => {
-    const email = document.getElementById('login-email').value;
-    const password = document.getElementById('login-password').value;
-    
-    signInWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        alert('Login realizado com sucesso!');
-      })
-      .catch((error) => {
-        alert('Erro no login: ' + error.message);
-      });
-  });
-
-  // Cadastro
-  document.getElementById('register-btn').addEventListener('click', () => {
-    const email = document.getElementById('login-email').value;
-    const password = document.getElementById('login-password').value;
-    
-    createUserWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        alert('Usuário cadastrado com sucesso!');
-      })
-      .catch((error) => {
-        alert('Erro no cadastro: ' + error.message);
-      });
-  });
-</script>
-    
-<!-- Formulário de Login e Cadastro -->
-<form id="login-form">
-  <input type="email" id="login-email" placeholder="Digite seu e-mail">
-  <input type="password" id="login-password" placeholder="Digite sua senha">
-  <button type="button" id="login-btn">Login</button>
-  <button type="button" id="register-btn">Cadastrar</button>
-</form>
-
-<!-- Modal de Login -->
+<!-- Botão de Login -->
 <button id="loginButton">Login</button>
 
 <!-- Modal de Login -->
@@ -84,9 +14,68 @@
     </div>
 </div>
 
-    </form>
-  </div>
-</div>
+<script type="module">
+  // Importar Firebase SDK
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
+  import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-auth.js";
+
+  // Configuração Firebase
+  const firebaseConfig = {
+      apiKey: "AIzaSyDC3ZhmTqjd3P44uvuOeIQccNH8N5x20fE",
+      authDomain: "verde-sabor.firebaseapp.com",
+      projectId: "verde-sabor",
+      storageBucket: "verde-sabor.appspot.com",
+      messagingSenderId: "803708320712",
+      appId: "1:803708320712:web:e225c98666c67a73bb9efd",
+      measurementId: "G-C3FCXHE4RX"
+  };
+
+  // Inicializa o Firebase
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
+
+  // Obter modal e elementos
+  var modal = document.getElementById("loginModal");
+  var btn = document.getElementById("loginButton");
+  var span = document.getElementsByClassName("close")[0];
+
+  // Abrir modal
+  btn.onclick = function() {
+      modal.style.display = "block";
+  }
+
+  // Fechar modal
+  span.onclick = function() {
+      modal.style.display = "none";
+  }
+
+  // Fechar modal clicando fora
+  window.onclick = function(event) {
+      if (event.target == modal) {
+          modal.style.display = "none";
+      }
+  }
+
+  // Listener para o formulário de login
+  document.getElementById('loginForm').addEventListener('submit', function(e) {
+      e.preventDefault(); // Impede envio padrão do formulário
+
+      var email = document.getElementById('email').value;
+      var password = document.getElementById('password').value;
+
+      // Login usando Firebase Auth
+      signInWithEmailAndPassword(auth, email, password)
+          .then((userCredential) => {
+              // Login bem-sucedido
+              alert("Login realizado com sucesso!");
+              modal.style.display = "none"; // Fecha o modal após o login
+          })
+          .catch((error) => {
+              // Exibe erro de login
+              alert("Erro no login: " + error.message);
+          });
+  });
+</script>
 
 <!-- Cabeçalho -->
 <header>
