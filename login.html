@@ -68,3 +68,60 @@
     </script>
 </body>
 </html>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página de Login</title>
+</head>
+<body>
+  <h2>Login</h2>
+  <form id="loginForm">
+    <input type="email" id="email" placeholder="Digite seu e-mail" required>
+    <input type="password" id="password" placeholder="Digite sua senha" required>
+    <button type="submit">Entrar</button>
+  </form>
+
+  <script type="module">
+    // Importar Firebase
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
+    import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-auth.js";
+
+    // Configuração Firebase
+    const firebaseConfig = {
+      apiKey: "AIzaSyDC3ZhmTqjd3P44uvuOeIQccNH8N5x20fE",
+      authDomain: "verde-sabor.firebaseapp.com",
+      projectId: "verde-sabor",
+      storageBucket: "verde-sabor.appspot.com",
+      messagingSenderId: "803708320712",
+      appId: "1:803708320712:web:e225c98666c67a73bb9efd",
+      measurementId: "G-C3FCXHE4RX"
+    };
+
+    // Inicializar Firebase
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+
+    // Função para Login
+    document.getElementById('loginForm').addEventListener('submit', function (e) {
+      e.preventDefault(); // Prevenir envio de formulário padrão
+
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+
+      signInWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+          // Sucesso no login
+          alert("Login realizado com sucesso!");
+        })
+        .catch((error) => {
+          // Erro no login
+          alert("Erro no login: " + error.message);
+        });
+    });
+  </script>
+</body>
+</html>
+
