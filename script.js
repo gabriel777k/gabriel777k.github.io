@@ -112,6 +112,21 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
 const auth = getAuth(app);
 e.preventDefault(); // Previne o comportamento padrão
 
+// Função de pesquisa
+document.getElementById('searchBtn').addEventListener('click', function() {
+  const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+  const productItems = document.querySelectorAll('.produto-item');
+
+  productItems.forEach(function(item) {
+    const productName = item.getAttribute('data-name');
+    if (productName.includes(searchTerm)) {
+      item.style.display = 'block'; // Exibe o produto se o termo corresponder
+    } else {
+      item.style.display = 'none';  // Esconde o produto se o termo não corresponder
+    }
+  });
+});
+
     
 });
 
