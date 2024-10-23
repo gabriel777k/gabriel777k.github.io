@@ -1,28 +1,13 @@
-// Pesquisa de produtos
-document.getElementById("search-btn").addEventListener("click", function() {
-    const searchInput = document.getElementById("search-input").value.toLowerCase();
-    const items = document.querySelectorAll(".produto-item h3");
+function pesquisar() {
+    const input = document.getElementById("search-input").value.toLowerCase();
+    const produtos = document.querySelectorAll(".produto-item");
 
-    items.forEach(item => {
-        const itemName = item.textContent.toLowerCase();
-        if (itemName.includes(searchInput)) {
-            item.parentElement.style.display = "block";
+    produtos.forEach(produto => {
+        const titulo = produto.querySelector("h3").textContent.toLowerCase();
+        if (titulo.includes(input)) {
+            produto.style.display = "block";
         } else {
-            item.parentElement.style.display = "none";
+            produto.style.display = "none";
         }
     });
-});
-
-// Modal de login
-const loginModal = document.getElementById("loginModal");
-const closeModal = document.getElementsByClassName("close")[0];
-
-closeModal.onclick = function() {
-  loginModal.style.display = "none";
-}
-
-window.onclick = function(event) {
-  if (event.target == loginModal) {
-    loginModal.style.display = "none";
-  }
 }
