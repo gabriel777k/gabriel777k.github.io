@@ -6,23 +6,53 @@ body {
 }
 
 header {
-    background-color: #4CAF50;
-    padding: 20px;
-    text-align: center;
-}
-
-.nav {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4CAF50;
+    padding: 10px 20px;
 }
 
-.produtos-populares {
-    padding: 20px;
+.logo img {
+    width: 150px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+.user-options a {
+    color: white;
+    margin-left: 20px;
+}
+
+.banner {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.banner img {
+    width: 100%;
+    height: auto;
+}
+
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .produto-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
     padding: 20px;
 }
@@ -30,11 +60,5 @@ header {
 .produto-item {
     background-color: white;
     padding: 20px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.produto-item img {
-    max-width: 100%;
-    height: auto;
-}
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0
