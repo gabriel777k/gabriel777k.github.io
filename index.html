@@ -3,30 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Verde Sabor - Benefícios de Alimentos</title>
+    <title>Verde Sabor - Produtos Naturais</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
     <!-- Cabeçalho -->
     <header>
         <div class="logo">
-            <h1>Verde Sabor</h1>
+            <img src="images/logo.png" alt="Logo Verde Sabor">
         </div>
-        <nav>
-            <a href="produtos.html">Alimentos Saudáveis</a>
-            <a href="login.html">Login</a>
-            <a href="carrinho.html">Favoritos</a>
+        <nav class="navbar">
+            <a href="produtos.html">Alimentos</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#contato">Contato</a>
         </nav>
-        <div class="search-bar">
-            <input type="text" id="search-input" placeholder="Pesquisar alimentos...">
-            <button onclick="pesquisar()">Buscar</button>
+        <div class="user-options">
+            <a href="login.html">Login</a>
+            <a href="carrinho.html">Carrinho</a>
         </div>
     </header>
 
     <!-- Banner -->
     <section class="banner">
-        <h2>Descubra os melhores alimentos para a saúde</h2>
-        <p>Explore nossa lista de alimentos nutritivos que você precisa conhecer.</p>
+        <img src="images/banner.jpg" alt="Banner de Produtos Naturais">
+        <div class="banner-text">
+            <h1>Descubra Produtos Saudáveis para uma Vida Melhor</h1>
+            <p>Explore alimentos que fazem bem para sua saúde e que você pode não conhecer!</p>
+        </div>
     </section>
+
+    <!-- Sobre -->
+    <section id="sobre" class="sobre">
+        <h2>Sobre Nós</h2>
+        <p>Verde Sabor é uma plataforma que visa fornecer informações valiosas sobre alimentos naturais e seus benefícios para a saúde.</p>
+    </section>
+
+    <!-- Relatos de Clientes -->
+    <section class="relatos">
+        <h2>Relatos de Clientes</h2>
+        <div class="relato-item">
+            <p>"Os alimentos que descobri aqui mudaram minha vida! Sinto-me mais saudável e equilibrado." - João Silva</p>
+        </div>
+        <div class="relato-item">
+            <p>"Adorei aprender sobre novos alimentos benéficos para minha saúde!" - Maria Oliveira</p>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="contato">
+        <h2>Entre em Contato</h2>
+        <p>Tem alguma dúvida ou sugestão? Fale conosco pelo WhatsApp ou Instagram!</p>
+        <a href="https://wa.me/5551985480872" class="contato-whatsapp">WhatsApp</a>
+        <a href="https://instagram.com/gb.vp07" class="contato-instagram">Instagram</a>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 Verde Sabor - Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
