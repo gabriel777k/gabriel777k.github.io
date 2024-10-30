@@ -1,137 +1,51 @@
-.logo {
-    width: 250px; /* Ajuste conforme necessário */
-    height: auto; /* Mantém a proporção da imagem */
-    border-radius: 50%; /* Arredonda a imagem completamente (círculo) */
-    /* Se quiser um arredondamento menor, use um valor como 10px ou 20px */
-}
-
-
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
     font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
-    color: #333;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
 }
 
-/* Cabeçalho */
 header {
+    text-align: center;
+    padding: 20px;
+    background-color: #4CAF50;
+    color: white;
+}
+
+.logo {
+    width: 150px; /* Ajuste conforme necessário */
+    border-radius: 50%; /* Arredonda a logo */
+}
+
+h1 {
+    margin: 10px 0;
+}
+
+.food-container {
     display: flex;
-    justify-content: space-between;
-    padding: 1rem;
-    background-color: #2f4f4f; /* Cinza escuro */
-    color: #f8f9fa; /* Cinza claro */
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
 }
 
-header .logo {
-    display: flex;
-    align-items: center;
-}
-
-header h1 {
-    margin-left: 10px;
-    color: #32cd32; /* Verde para contraste */
-}
-
-nav a {
-    color: #f8f9fa; /* Cinza claro */
-    margin: 0 1rem;
-    text-decoration: none;
-}
-
-nav a:hover {
-    color: #32cd32; /* Verde */
-}
-
-/* Banner */
-.banner {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: url('banner.jpg') no-repeat center;
-    background-size: cover;
-    height: 50vh;
-    color: #f8f9fa;
-}
-
-.banner-text {
-    text-align: center;
-    background-color: rgba(47, 79, 79, 0.8); /* Fundo cinza escuro com transparência */
-    padding: 2rem;
+.food-item {
+    background: white;
+    border: 1px solid #ddd;
     border-radius: 8px;
-}
-
-/* Produtos */
-.produtos-grid {
-    padding: 2rem;
-    text-align: center;
-    background-color: #f4f6f7;
-}
-
-.produtos-grid h2 {
-    color: #2f4f4f;
-    margin-bottom: 1rem;
-}
-
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-}
-
-.produto-item {
-    background-color: white;
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(47, 79, 79, 0.1);
-    text-align: center;
-    transition: transform 0.3s ease;
-}
-
-.produto-item:hover {
-    transform: scale(1.05);
-}
-
-.produto-item img {
-    width: 100%;
-    border-radius: 8px;
-}
-
-.produto-item h3 {
-    margin: 0.5rem 0;
-    color: #2f4f4f;
-}
-
-.produto-item p {
-    color: #32cd32;
-}
-
-/* Contato */
-.contato-section {
-    padding: 2rem;
-    background-color: #d3d3d3; /* Cinza médio */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin: 10px;
+    padding: 15px;
+    width: 300px; /* Largura fixa para os itens */
     text-align: center;
 }
 
-.contato-section h2 {
-    color: #2f4f4f;
-    margin-bottom: 1rem;
+.food-image {
+    max-width: 100%; /* Responsividade */
+    border-radius: 8px; /* Bordas arredondadas nas imagens */
 }
 
-footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: #2f4f4f;
-    color: #f8f9fa;
+.details {
+    margin-top: 10px;
+    padding: 10px;
+    border-top: 1px solid #eee;
 }
-
-.product-image {
-    width: 200px; /* Ajuste conforme necessário */
-    height: auto; /* Mantém a proporção da imagem */
-}
-
