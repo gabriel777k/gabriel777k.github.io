@@ -1,44 +1,42 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Verde Sabor - Produtos Naturais</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css"> <!-- Link para o seu CSS -->
+    <title>Alimentos Saudáveis</title>
 </head>
 <body>
-    <!-- Cabeçalho -->
     <header>
-        <div class="logo">
-            <img src="images/Design.jpg" alt="Logo Verde Sabor">
-            <h1>Verde Sabor</h1>
-        </div>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="produtos.html">Produtos</a>
-            <a href="#contato">Contato</a>
-        </nav>
+        <img src="imagens/logo.jpg" alt="Logo Verde Sabor" class="logo">
+        <h1>Alimentos Benéficos para a Saúde</h1>
     </header>
+    <main>
+        <div class="food-container">
+            <div class="food-item">
+                <img src="caminho/para/imagem_chia.jpg" alt="Chia" class="food-image">
+                <h3>Chia</h3>
+                <p>Rica em ácidos graxos ômega-3 e antioxidantes.</p>
+                <button class="view-more" onclick="toggleDetails('chia-details')">Ver mais</button>
+                <div id="chia-details" class="details" style="display:none;">
+                    <h4>Benefícios:</h4>
+                    <ul>
+                        <li>Ajuda na saúde digestiva.</li>
+                        <li>Reduz o colesterol.</li>
+                        <li>Promove a saciedade.</li>
+                    </ul>
+                    <h4>Modo de Uso:</h4>
+                    <p>Adicione a smoothies, iogurtes ou saladas.</p>
+                </div>
+            </div>
 
-    <!-- Banner -->
-    <section class="banner">
-        <div class="banner-text">
-            <h1>Bem-vindo ao Verde Sabor</h1>
-            <p>Explore os benefícios dos alimentos naturais para uma vida mais saudável.</p>
-            <a href="produtos.html" class="btn-banner">Conheça nossos produtos</a>
+            <!-- Repita a estrutura para outros alimentos -->
+
         </div>
-    </section>
-
-    <!-- Seção sobre benefícios -->
-    <section class="beneficios">
-        <h2>Benefícios dos Alimentos Naturais</h2>
-        <p>Alimentos ricos em nutrientes e com propriedades que promovem saúde, energia e bem-estar.</p>
-    </section>
-
-    <!-- Rodapé -->
-    <footer id="contato">
-        <p>&copy; 2024 Verde Sabor - Produtos Naturais</p>
-        <p>Contato: contato@verdesabor.com | Instagram: <a href="https://instagram.com/gb.vp07">@gb.vp07</a></p>
+    </main>
+    <footer>
+        <p>&copy; 2024 Verde Sabor</p>
     </footer>
+    <script src="script.js"></script> <!-- Link para o seu JavaScript -->
 </body>
 </html>
