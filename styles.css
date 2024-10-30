@@ -1,7 +1,10 @@
-img {
+.logo {
     width: 250px; /* Ajuste conforme necessário */
     height: auto; /* Mantém a proporção da imagem */
+    border-radius: 50%; /* Arredonda a imagem completamente (círculo) */
+    /* Se quiser um arredondamento menor, use um valor como 10px ou 20px */
 }
+
 
 
 * {
