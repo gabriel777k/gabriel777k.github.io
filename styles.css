@@ -1,3 +1,9 @@
+img {
+    width: 250px; /* Ajuste conforme necessário */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+
 * {
     margin: 0;
     padding: 0;
