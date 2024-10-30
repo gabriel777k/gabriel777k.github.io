@@ -6,46 +6,67 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
+    background-color: #f8f9fa;
+    color: #333;
 }
 
+/* Cabeçalho */
 header {
     display: flex;
     justify-content: space-between;
     padding: 1rem;
-    background-color: #006400;
-    color: white;
+    background-color: #2f4f4f; /* Cinza escuro */
+    color: #f8f9fa; /* Cinza claro */
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header h1 {
+    margin-left: 10px;
+    color: #32cd32; /* Verde para contraste */
 }
 
 nav a {
-    color: white;
+    color: #f8f9fa; /* Cinza claro */
     margin: 0 1rem;
     text-decoration: none;
 }
 
+nav a:hover {
+    color: #32cd32; /* Verde */
+}
+
+/* Banner */
 .banner {
     display: flex;
     justify-content: center;
     align-items: center;
     background: url('banner.jpg') no-repeat center;
     background-size: cover;
-    height: 60vh;
+    height: 50vh;
+    color: #f8f9fa;
 }
 
 .banner-text {
-    color: white;
     text-align: center;
+    background-color: rgba(47, 79, 79, 0.8); /* Fundo cinza escuro com transparência */
+    padding: 2rem;
+    border-radius: 8px;
 }
 
-.btn-banner {
-    background-color: #006400;
-    padding: 0.5rem 1rem;
-    color: white;
-    text-decoration: none;
-}
-
+/* Produtos */
 .produtos-grid {
     padding: 2rem;
+    text-align: center;
+    background-color: #f4f6f7;
+}
+
+.produtos-grid h2 {
+    color: #2f4f4f;
+    margin-bottom: 1rem;
 }
 
 .grid-container {
@@ -57,6 +78,45 @@ nav a {
 .produto-item {
     background-color: white;
     padding: 1rem;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(47, 79, 79, 0.1);
     text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.produto-item:hover {
+    transform: scale(1.05);
+}
+
+.produto-item img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.produto-item h3 {
+    margin: 0.5rem 0;
+    color: #2f4f4f;
+}
+
+.produto-item p {
+    color: #32cd32;
+}
+
+/* Contato */
+.contato-section {
+    padding: 2rem;
+    background-color: #d3d3d3; /* Cinza médio */
+    text-align: center;
+}
+
+.contato-section h2 {
+    color: #2f4f4f;
+    margin-bottom: 1rem;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #2f4f4f;
+    color: #f8f9fa;
 }
