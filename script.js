@@ -1,13 +1,5 @@
-function pesquisar() {
-    const input = document.getElementById("search-input").value.toLowerCase();
-    const produtos = document.querySelectorAll(".produto-item");
-
-    produtos.forEach(produto => {
-        const titulo = produto.querySelector("h3").textContent.toLowerCase();
-        if (titulo.includes(input)) {
-            produto.style.display = "block";
-        } else {
-            produto.style.display = "none";
-        }
-    });
+function toggleDetails(id) {
+    const details = document.getElementById(id);
+    details.style.display = (details.style.display === "none") ? "block" : "none";
 }
+
