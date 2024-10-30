@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css"> <!-- Link para o seu CSS -->
+    <link rel="stylesheet" href="styles.css"> <!-- Link para o CSS -->
     <title>Alimentos Saudáveis</title>
 </head>
 <body>
     <header>
-        <img src="images/logo.jpg" alt="Logo Verde Sabor" class="logo">
+        <img src="imagens/logo.jpg" alt="Logo Verde Sabor" class="logo">
         <h1>Alimentos Benéficos para a Saúde</h1>
     </header>
     <main>
         <div class="food-container">
-            <div class="food-item">
-                <img src="images/chia.jpg" alt="Chia" class="food-image">
+            <div class="food-card">
+                <img src="caminho/para/imagem_chia.jpg" alt="Chia" class="food-image">
                 <h3>Chia</h3>
                 <p>Rica em ácidos graxos ômega-3 e antioxidantes.</p>
                 <button class="view-more" onclick="toggleDetails('chia-details')">Ver mais</button>
@@ -30,13 +30,30 @@
                 </div>
             </div>
 
-            <!-- Repita a estrutura para outros alimentos -->
+            <div class="food-card">
+                <img src="caminho/para/imagem_quinoa.jpg" alt="Quinoa" class="food-image">
+                <h3>Quinoa</h3>
+                <p>Fonte de proteínas completas e rica em aminoácidos.</p>
+                <button class="view-more" onclick="toggleDetails('quinoa-details')">Ver mais</button>
+                <div id="quinoa-details" class="details" style="display:none;">
+                    <h4>Benefícios:</h4>
+                    <ul>
+                        <li>Melhora a saúde do coração.</li>
+                        <li>Ajuda no controle do peso.</li>
+                        <li>Rica em fibras e antioxidantes.</li>
+                    </ul>
+                    <h4>Modo de Uso:</h4>
+                    <p>Use em saladas, sopas ou como acompanhamento.</p>
+                </div>
+            </div>
+
+            <!-- Adicione mais alimentos aqui seguindo a mesma estrutura -->
 
         </div>
     </main>
     <footer>
         <p>&copy; 2024 Verde Sabor</p>
     </footer>
-    <script src="script.js"></script> <!-- Link para o seu JavaScript -->
+    <script src="script.js"></script> <!-- Link para o JavaScript -->
 </body>
 </html>
