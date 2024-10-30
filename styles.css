@@ -129,3 +129,9 @@ footer {
     background-color: #2f4f4f;
     color: #f8f9fa;
 }
+
+.product-image {
+    width: 200px; /* Ajuste conforme necessário */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
