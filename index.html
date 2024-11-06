@@ -1,128 +1,37 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css"> <!-- Link para o CSS -->
-    <title>Alimentos Saudáveis</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NaturaFood - Delivery de Alimentos Naturais</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <img src="imagens/logo.jpg" alt="Logo Verde Sabor" class="logo">
-        <h1>Alimentos Benéficos para a Saúde</h1>
-    </header>
-    <main>
-        <div class="food-container">
-            <div class="food-card">
-                <img src="caminho/para/imagem_chia.jpg" alt="Chia" class="food-image">
-                <h3>Chia</h3>
-                <p>Rica em ácidos graxos ômega-3 e antioxidantes.</p>
-                <button class="view-more" onclick="toggleDetails('chia-details')">Ver mais</button>
-                <div id="chia-details" class="details" style="display:none;">
-                    <h4>Benefícios:</h4>
-                    <ul>
-                        <li>Ajuda na saúde digestiva.</li>
-                        <li>Reduz o colesterol.</li>
-                        <li>Promove a saciedade.</li>
-                    </ul>
-                    <h4>Modo de Uso:</h4>
-                    <p>Adicione a smoothies, iogurtes ou saladas.</p>
-                </div>
-            </div>
+  <header>
+    <div class="logo">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+        <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4V6h16v12zM6 10h2v2H6zm0 4h8v2H6z"/>
+      </svg>
+      NaturaFood
+    </div>
+    <div class="search-bar">
+      <input type="text" placeholder="Busque por restaurantes ou produtos naturais...">
+    </div>
+  </header>
 
-            <div class="food-card">
-                <img src="caminho/para/imagem_quinoa.jpg" alt="Quinoa" class="food-image">
-                <h3>Quinoa</h3>
-                <p>Fonte de proteínas completas e rica em aminoácidos.</p>
-                <button class="view-more" onclick="toggleDetails('quinoa-details')">Ver mais</button>
-                <div id="quinoa-details" class="details" style="display:none;">
-                    <h4>Benefícios:</h4>
-                    <ul>
-                        <li>Melhora a saúde do coração.</li>
-                        <li>Ajuda no controle do peso.</li>
-                        <li>Rica em fibras e antioxidantes.</li>
-                    </ul>
-                    <h4>Modo de Uso:</h4>
-                    <p>Use em saladas, sopas ou como acompanhamento.</p>
-                </div>
-            <div class="food-container">
-    <div class="food-card">
-        <img src="images/batata.jpg" alt="Batata Doce" class="food-image">
-        <h3>Batata Doce</h3>
-        <p>Rica em fibras, vitaminas e minerais.</p>
-        <button class="view-more" onclick="toggleDetails('batata-doce-details')">Ver mais</button>
-        <div id="batata-doce-details" class="details" style="display:none;">
-            <h4>Benefícios:</h4>
-            <ul>
-                <li>Ajuda na regulação do açúcar no sangue.</li>
-                <li>Fortalece o sistema imunológico.</li>
-                <li>Promove a saúde digestiva.</li>
-            </ul>
-            <h4>Modo de Uso:</h4>
-            <p>Assada, cozida ou em purês.</p>
-        </div>
+  <main>
+    <div class="categories">
+      <div class="category" data-category="orgânicos">Orgânicos</div>
+      <div class="category" data-category="vegano">Vegano</div>
+      <div class="category" data-category="sem glúten">Sem Glúten</div>
+      <div class="category" data-category="sucos">Sucos</div>
     </div>
 
-    <div class="food-card">
-        <img src="images/aveia.jpg" alt="Aveia" class="food-image">
-        <h3>Aveia</h3>
-        <p>Fonte de fibras solúveis e proteínas.</p>
-        <button class="view-more" onclick="toggleDetails('aveia-details')">Ver mais</button>
-        <div id="aveia-details" class="details" style="display:none;">
-            <h4>Benefícios:</h4>
-            <ul>
-                <li>Melhora a saúde do coração.</li>
-                <li>Ajuda na perda de peso.</li>
-                <li>Regula o colesterol.</li>
-            </ul>
-            <h4>Modo de Uso:</h4>
-            <p>Use em mingaus, smoothies ou granolas.</p>
-        </div>
+    <div class="restaurants">
+      <!-- Cards de restaurantes -->
     </div>
+  </main>
 
-    <div class="food-card">
-        <img src="caminho/para/imagem_amendoim.jpg" alt="Amendoim" class="food-image">
-        <h3>Amendoim</h3>
-        <p>Rico em proteínas e gorduras saudáveis.</p>
-        <button class="view-more" onclick="toggleDetails('amendoim-details')">Ver mais</button>
-        <div id="amendoim-details" class="details" style="display:none;">
-            <h4>Benefícios:</h4>
-            <ul>
-                <li>Ajuda na saúde do coração.</li>
-                <li>Fornece energia rápida.</li>
-                <li>Rico em antioxidantes.</li>
-            </ul>
-            <h4>Modo de Uso:</h4>
-            <p>Como lanche, em manteigas ou em receitas.</p>
-        </div>
-    </div>
-
-    <div class="food-card">
-        <img src="images/curcuma.jpg" alt="Cúrcuma" class="food-image">
-        <h3>Cúrcuma</h3>
-        <p>Possui propriedades anti-inflamatórias e antioxidantes.</p>
-        <button class="view-more" onclick="toggleDetails('curcuma-details')">Ver mais</button>
-        <div id="curcuma-details" class="details" style="display:none;">
-            <h4>Benefícios:</h4>
-            <ul>
-                <li>Ajuda a reduzir a inflamação.</li>
-                <li>Melhora a saúde do cérebro.</li>
-                <li>Promove a saúde digestiva.</li>
-            </ul>
-            <h4>Modo de Uso:</h4>
-            <p>Use em temperos, chás ou em receitas.</p>
-        </div>
-    </div>
-</div>
-        </div>
-
-            <!-- Adicione mais alimentos aqui seguindo a mesma estrutura -->
-
-        </div>
-    </main>
-    <footer>
-        <p>&copy; 2024 Verde Sabor</p>
-    </footer>
-    <script src="script.js"></script> <!-- Link para o JavaScript -->
+  <script src="script.js"></script>
 </body>
 </html>
